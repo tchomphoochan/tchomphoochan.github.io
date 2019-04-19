@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{% include article.html class='post'
+           title=page.title content=content
+           date=page.date tags=page.tags
+           origin=page.origin
+           styles=page.styles
+           scripts=page.scripts
+           paginate='single' comment=true %}

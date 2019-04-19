@@ -1,0 +1,28 @@
+{% include variables/article.liquid %}
+{% if include.content %}
+  <article class="{% if include.url %}excerpt {% endif %}{{ include.class }}" id="article">
+
+    {% for style in include.styles %}
+      <link rel="stylesheet" href="{{style}}">
+    {% endfor %}
+
+    {% include article/title.html title=include.title url=include.url %}
+    {% include article/info.html tags=include.tags date=article-date format=article-format %}
+    {% unless include.url %}
+      {% include menu/demo_source.html demo=include.demo source=include.source %}
+    {% endunless %}
+    <div class="entry">
+      {{ include.content }}
+      {% include article/read_more.html url=include.url demo=include.demo source=include.source %}
+      {% include article/origin.html origin=include.origin %}
+    </div>
+
+    {% include article/paginate.html paginate=include.paginate %}
+    {% include article/comment.html comment=include.comment %}
+
+    {% for script in include.scripts %}
+      <script src="{{script}}"></script>
+    {% endfor %}
+
+  </article>
+{% endif %}
