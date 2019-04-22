@@ -3,7 +3,7 @@ layout: empty/homepage
 regenerate: true
 feature:
   posts:
-    latest: 1
+    latest: 10
     list:
   projects:
     latest: 0

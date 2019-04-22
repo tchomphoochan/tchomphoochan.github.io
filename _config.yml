@@ -58,10 +58,21 @@ collections:
 defaults:
   - scope:
       path: ""
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
     values:
       layout: post
       mathjax: dollar # dollar, brackets or none
       author: "Thanadol Chomphoochan"
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: doc
 
 permalink: date
 paginate_path: "/posts/page:num"
