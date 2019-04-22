@@ -42,7 +42,7 @@ disqus:
 
 timezone: Asia/Bangkok
 paginate: 10
-mathjax:  true
+#mathjax:  true
 
 
 # Engine Config
@@ -58,19 +58,10 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: pages
-    values:
-      layout: page
-  - scope:
-      path: ""
-      type: posts
     values:
       layout: post
-  - scope:
-      path: ""
-      type: docs
-    values:
-      layout: doc
+      mathjax: dollar # dollar, brackets or none
+      author: "Thanadol Chomphoochan"
 
 permalink: date
 paginate_path: "/posts/page:num"

@@ -1,7 +1,9 @@
 ---
 title: สอน Binary Search ฉบับสมบูรณ์โคตรๆ
 tags:
-  - Algorithms
+  - Tutorial
+  - Programming
+  - Algorithms and Data Structures
 date: 2019-04-12 13:25:00 +0700
 styles:
   - /post-extensions/bsearch-tutorial/style.css
