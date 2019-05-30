@@ -7,18 +7,18 @@
     {% endfor %}
 
     {% include article/title.html title=include.title url=include.url %}
-    {% include article/info.html tags=include.tags date=article-date format=article-format %}
+    {% include article/info.html tags=include.tags date=article-date format=article-format origin=include.origin %}
     {% unless include.url %}
       {% include menu/demo_source.html demo=include.demo source=include.source %}
     {% endunless %}
     <div class="entry">
+      <!--{% include article/origin.html origin=include.origin %}-->
       {{ include.content }}
       {% include article/read_more.html url=include.url demo=include.demo source=include.source %}
-      {% include article/origin.html origin=include.origin %}
     </div>
 
     {% include article/paginate.html paginate=include.paginate %}
-    {% include article/comment.html comment=include.comment %}
+    {% include article/comment.html comment=include.comment origin=include.origin %}
 
     {% for script in include.scripts %}
       <script src="{{script}}"></script>

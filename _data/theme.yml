@@ -47,6 +47,7 @@ text:
     next_page:    Next
   post:
     origin:       "Originally published on: "
+    comment_origin: "Discussions are available on: "
     archive:      Archive
     tags:         Tags
 

@@ -39,6 +39,21 @@
     align-self: stretch;
 }
 
+.origin {
+    font-family: $font-head;
+    font-style: italic;
+    flex: 0 0 auto;
+    align-self: stretch;
+}
+
+.comment-origin {
+    font-family: $font-head;
+    font-style: italic;
+    flex: 0 0 auto;
+    align-self: stretch;
+    margin: 1em;
+    text-align: center
+}
 
 .mini-title, .tags {
     margin: 0 1em;

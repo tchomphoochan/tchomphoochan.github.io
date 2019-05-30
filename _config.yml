@@ -68,6 +68,7 @@ defaults:
       layout: post
       mathjax: dollar # dollar, brackets or none
       author: "Thanadol Chomphoochan"
+      comment: "disqus"
   - scope:
       path: ""
       type: docs

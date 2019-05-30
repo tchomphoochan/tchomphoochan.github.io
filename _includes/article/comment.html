@@ -1,5 +1,17 @@
-{% if include.comment %}
+{% if include.comment == 'disqus' %}
   <div class="comment">
     {% include script/disqus.html %}
+  </div>
+{% elsif include.comment == 'origin' %}
+  <div class="comment-origin">
+  {{ site.data.theme.text.post.comment_origin }}
+  {% for each in include.origin %}
+    {% if each.url %}
+      <a href="{{ each.url }}">{{ each.name }}</a>
+    {% else %}
+      {{ each.name }}
+    {% endif %}
+    {% unless forloop.last %}/{% endunless %}
+  {% endfor %}
   </div>
 {% endif %}

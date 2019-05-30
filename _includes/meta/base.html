@@ -3,5 +3,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ meta-html_title }}</title>
 <meta name="description" content="{{ meta-description }}">
-<link rel="canonical" href="{{ meta-url }}">
+{% if page.origin %}
+{% for each in page.origin %}
+    {% if each.url %}
+        <link rel="canonical" href="{{ each.url }}">
+    {% endif %}
+{% endfor %}
+{% else %}
+    <link rel="canonical" href="{{ meta-url }}">
+{% endif %}
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">

@@ -10,7 +10,7 @@
     {% include article.html class='post'
                title=post.title content=post.excerpt
                date=post.date tags=post.tags
-               url=post.url quota=quota %}
+               url=post.url origin=post.origin quota=quota %}
     {% if quota > 0 %}
       {% assign quota = quota | minus: 1 %}
     {% endif %}
