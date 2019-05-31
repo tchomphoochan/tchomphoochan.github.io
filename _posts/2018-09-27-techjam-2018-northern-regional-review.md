@@ -21,11 +21,6 @@ origin:
 > <iframe width="560" height="315" src="https://www.youtube.com/embed/2kNSMbaJFz4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 > คลิป Teaser ของ Techjam 2018 — Regional Competition ภาคเหนือ
 
-{: .infobox .no_toc}
-> **Table of Contents**
-> - TOC
-> {:toc}
-
 ## First Impression
 
 แค่เดินเข้าพื้นที่จัดงานไปก็รู้แล้วว่า KBTG ไม่ได้จัดงานนี้เล่น ๆ องค์ประกอบแต่ละอย่างจัดตกแต่งสวยงามเวอร์วังอลังการงานสร้าง สิ่งที่ผมต้องทำเมื่อเข้างานไปก็คือเดินไปโต๊ะลงทะเบียนละก็กรอกข้อมูลต่าง ๆ นานา จัดการไปตามระเบียบพิธีการยาว ๆ ไป
