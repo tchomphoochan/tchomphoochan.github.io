@@ -3,8 +3,12 @@ layout: empty/homepage
 regenerate: true
 feature:
   posts:
-    latest: 10
+    latest: 0
     list:
+      - /2018/09/27/techjam-2018-northern-regional-review
+      - /2018/10/25/the-tale-of-recursion-fairy
+      - /2019/01/28/an-introduction-to-dynamic-programming
+      - /2019/04/12/complete-bsearch-tutorial
   projects:
     latest: 0
     list:
