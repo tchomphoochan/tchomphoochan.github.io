@@ -3,7 +3,7 @@ layout: empty/homepage
 regenerate: true
 feature:
   posts:
-    latest: 0
+    latest: 1
     list:
       - /2018/09/27/techjam-2018-northern-regional-review
       - /2018/10/25/the-tale-of-recursion-fairy
