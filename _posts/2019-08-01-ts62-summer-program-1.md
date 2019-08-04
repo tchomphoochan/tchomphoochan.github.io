@@ -175,7 +175,7 @@ Elizabeth Preysner (Liz) เป็นผู้สอน วิชานี้เ
 
 ### US Culture
 
-สำหรับวิชานี้ สอนโดย Vince Alvelo (Mr. A) จะมีเนื้อหาเกี่ยวกับวัฒนธรรมที่จะได้พบเจอในสหรัฐอเมริกา รวมถึงประวัติศาสตร์ชาติอเมริกาที่ควรรู้ การบ้านแทบจะคาดเดาไม่ได้ บางวันไม่มี บางวันก็ต้องเขียนตอบเยอะพอสมควร
+สำหรับวิชานี้ สอนโดย Vince Alvelo (Mr. A) จะมีเนื้อหาเกี่ยวกับวัฒนธรรมที่จะได้พบเจอในสหรัฐอเมริกา รวมถึงประวัติศาสตร์ชาติอเมริกาที่ควรรู้
 
 ในช่วง Study Hall ของแต่ละวัน นักเรียนจะต้องเขียน Culture Journal เพื่อเป็นการ reflect เล็ก ๆ น้อย ๆ ว่าชีวิตที่ผ่านมาใน Brewster Academy เป็นอย่างไรบ้าง แต่ละวันจะมีโจทย์หัวข้อมาให้เขียนต่างกัน ทั้งนี้ การเขียนไม่จำเป็นต้องทางการมากก็ได้ เพราะคนที่ตรวจคือ American TA ใน Discussion Group ของแต่ละคน ส่วนนี้ช่วยให้ได้ฝึกเขียนเยอะพอสมควร รวมถึงทวนคิดชีวิตที่แสนจะสวยงามใน Brewster~
 
@@ -335,9 +335,18 @@ Thanksgiving Day โดยทั่วไปแล้วจะเฉลิมฉ
 
 ## ชีวิตต่อไปจะเป็นอย่างไร — Looking Forward
 
-ครึ้งแรกของ Brewster Academy ก็ได้จบไปแล้ว หลังจากนี้ตารางเรียนก็จะเปลี่ยน แทนที่จะเป็นวิชาแนว ๆ ภาษาอังกฤษ ก็จะเปลี่ยนมาเน้นพวกการเตรียมตัวเข้ามหาวิทยาลัยแทน (College Guidance, College Essay เป็นต้น) นอกจากการเรียนตามปกติแล้ว ครึ่งหลัง นักเรียน TS จะมีโอกาสได้ไปทัวร์มหาวิทยาลัยต่าง ๆ เป็นจำนวนมาก มีอะไรเป็นอย่างไรบ้างไว้มาอัพเดทในบล็อกถัดไปละกันครับ :D (ถ้าไม่ขี้เกียจนะ)
+สำหรับผู้ที่สนใจอ่านข้อมูลเพิ่มเติม สามารถอ่านได้จาก Newsletter ที่เขียนโดยนักเรียน TS62 ทุกสัปดาห์ ตามลิงค์นี้ครับ:
+[Week 1](/post-extensions/ts62-summer-program-1/ts62-newsletter-week-1.pdf) |
+[Week 2](/post-extensions/ts62-summer-program-1/ts62-newsletter-week-2.pdf) |
+[Week 3](/post-extensions/ts62-summer-program-1/ts62-newsletter-week-3.pdf) |
+[Boston Trip](/post-extensions/ts62-summer-program-1/ts62-boston-chronicles.pdf) |
+[Week 4](/post-extensions/ts62-summer-program-1/ts62-newsletter-week-4.pdf) |
+[Week 5](/post-extensions/ts62-summer-program-1/ts62-newsletter-week-5.pdf) |
+[Week 6](/post-extensions/ts62-summer-program-1/ts62-newsletter-week-6.pdf)
 
-Some spoilers:
+ครึ่งแรกของ Brewster Academy ก็ได้จบไปแล้ว หลังจากนี้ตารางเรียนก็จะเปลี่ยน แทนที่จะเป็นวิชาแนว ๆ ภาษาอังกฤษ ก็จะเปลี่ยนมาเน้นพวกการเตรียมตัวเข้ามหาวิทยาลัยแทน (College Guidance, College Essay เป็นต้น) นอกจากการเรียนตามปกติแล้ว ครึ่งหลัง นักเรียน TS จะมีโอกาสได้ไปทัวร์มหาวิทยาลัยต่าง ๆ เป็นจำนวนมาก มีอะไรเป็นอย่างไรบ้างไว้มาอัพเดทในบล็อกถัดไปละกันครับ :D (ถ้าไม่ขี้เกียจนะ)
+
+Spoiler สำหรับบล็อกรีวิว 2nd Half:
 
 {: .figure}
 > ![](/post-extensions/ts62-summer-program-1/bowdoin.jpg)
