@@ -203,5 +203,5 @@ Knight ห้ามกระโดดออกนอกตาราง หรื
 - [Subway --- IOI Thailand League 2013](https://programming.in.th/task/rev2_problem.php?pid=1133)
 - [หลอดไฟ (Bulb) --- CodeCube](https://www.codecube.in.th/task/27)
 - [Seven Gems --- CodeCube](https://www.codecube.in.th/task/153)
-- [โลจิสติกส์ (Logistics) --- TOI14](/post-extensions/state-graph-tutorial/toi14_logistics.pdf) (No grader)
-- [ค่ายกลพิฆาตแมลงวัน (Fly) --- TOI15](/post-extensions/state-graph-tutorial/toi15_fly.pdf) (No grader)
+- [โลจิสติกส์ (Logistics) --- TOI14](https://www.proprog.tk/tasks/toi14_logistic/descs/14202)
+- [ค่ายกลพิฆาตแมลงวัน (Fly) --- TOI15](https://www.proprog.tk/tasks/toi15_fly/descs/15445)
