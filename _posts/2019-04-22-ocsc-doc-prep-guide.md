@@ -141,16 +141,17 @@ _ส่วนนี้ผมไม่มั่นใจว่าจำเป็�
 [International fees for SAT](https://collegereadiness.collegeboard.org/sat/register/international/fees)\\
 [International fees for SAT Subject Tests](https://collegereadiness.collegeboard.org/sat-subject-tests/register/international-registration/fees)
 
-#### ตารางสอบ SAT ภายในปี 2019-20
+#### ตารางสอบ SAT ภายในปี 2020
 
 |วันที่สอบ|SAT (with essay)|SAT Subject Tests|ปิดรับสมัครสอบ|
 |--|--|--|--|
-|October 5, 2019|Yes|Yes|September 6, 2019|
-|November 2, 2019|**No**|Yes|October 3, 2019|
-|December 7, 2019|Yes|Yes|November 8, 2019|
 |March 14, 2020|Yes|**No**|February 14, 2020|
 |May 2, 2020|Yes|Yes|April 3, 2020|
 |June 6, 2020|**No**|Yes|May 8, 2020|
+|August 29, 2020|Yes|Yes|ยังไม่ประกาศ|
+|October 3, 2020|Yes|Yes|ยังไม่ประกาศ|
+|November 7, 2020|Yes|Yes|ยังไม่ประกาศ|
+|December 5, 2020|Yes|Yes|ยังไม่ประกาศ|
 
 (วิชา Mathematics Level 1, Mathematics Level 2, Physics, Chemistry, Biology E/M เปิดให้สอบทุกรอบที่มีการสอบ SAT Subject Tests หากต้องการสอบวิชาอื่นให้ตรวจสอบในเว็บไซต์ของ CollegeBoard)
 
