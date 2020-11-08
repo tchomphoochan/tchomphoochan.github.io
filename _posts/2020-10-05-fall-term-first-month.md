@@ -51,9 +51,9 @@ All was fine and good until I asked one of my friends what they are taking this 
 {: .figure}
 > ![](/post-extensions/fall-term-first-month/854discord.png)
 
-And so I checked. 6.854 Advanced Algorithms is a graduate-level class in algorithms. I checked the syllabus and found the class to be very interesting as it continues directly from my current knowledge in algorithms (from competitive programming), while 6.046 seems to repeat a lot of what I already know. 6.854 also does not have high-stakes exams but rather big weekly problem sets and a final research project. I decided against it.
+And so I checked. 6.854 Advanced Algorithms is a graduate-level class in algorithms. I checked the syllabus and found the class to be very interesting as it continues directly from my current knowledge in algorithms (from competitive programming), while 6.046 seems to repeat a lot of what I already know. 6.854 also does not have high-stakes exams but rather big weekly problem sets. I decided against it.
 
-And then two other people told me he was gonna take 6.854. I didn't budge. Then...
+And then two other people told me they were gonna take 6.854. I didn't budge. Then...
 
 {: .figure}
 > ![](/post-extensions/fall-term-first-month/854project.png){:width="90%"}
