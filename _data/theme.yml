@@ -16,8 +16,10 @@ date:
 #TODO you may change navigation behavior here.
 navigation:
   menu:
-    - name: Archive
+    - name: Posts
       path: "/posts"
+    - name: Projects
+      path: "/projects"
     - name: About
       path: "/about"
   paginate:
@@ -50,7 +52,9 @@ text:
     comment_origin: "Discussions are available on "
     archive:      Archive
     tags:         Tags
-
+  project:
+    demo:         Live Demo!
+    source:       Source Code
 
 #TODO you may change/add more font here.
 font:
