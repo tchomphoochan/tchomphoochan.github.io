@@ -3,13 +3,13 @@ title: "6.854 Fall 2020 Lecture Notes"
 date: 2020-05-12
 ---
 
-[**Click here to download lecture notes.**][lecturenotes]
-
-The lectures are given according to this calendar from [the official course website][courseweb].
+[**Click here to download lecture notes.**][lecturenotes] _(Last updated: December 6th, 2020)_
 
 {: .figure}
 > ![](/project-files/6854-lectures-preview.png)
 >
+
+The lectures are given according to this calendar from [the official course website][courseweb].
 
 [lecturenotes]:  /project-files/6854-lectures.pdf
 [courseweb]: http://courses.csail.mit.edu/6.854/current/
