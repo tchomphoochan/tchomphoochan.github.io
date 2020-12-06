@@ -1,6 +1,6 @@
 ---
 title: "6.854 Fall 2020 Lecture Notes"
-date: 2020-05-12
+date: 2020-12-05 21:00:00 +0700
 ---
 
 [**Click here to download lecture notes.**][lecturenotes] _(Last updated: December 6th, 2020)_
