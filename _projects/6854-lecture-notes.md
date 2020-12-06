@@ -12,7 +12,7 @@ date: 2020-12-05 21:00:00 +0700
 The lectures are given according to this calendar from [the official course website][courseweb].
 
 [lecturenotes]:  /project-files/6854-lectures.pdf
-[courseweb]: http://courses.csail.mit.edu/6.854/current/
+[courseweb]: http://courses.csail.mit.edu/6.854/20/
 
 | # | Date | Topic |
 |:-:|--|--|
