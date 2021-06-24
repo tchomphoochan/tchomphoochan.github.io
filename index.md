@@ -3,14 +3,12 @@ layout: empty/homepage
 regenerate: true
 feature:
   posts:
-    latest: 1
+    latest: 3
     list:
+      - /2020/12/30/fall-term-reflections
       - /2020/10/05/fall-term-first-month
       - /2019/08/19/state-graph-tutorial
       - /2019/08/01/ts62-summer-program-1
-      - /2018/09/27/techjam-2018-northern-regional-review
-      - /2018/10/25/the-tale-of-recursion-fairy
-      - /2019/01/28/an-introduction-to-dynamic-programming
       - /2019/04/12/complete-bsearch-tutorial
   projects:
     latest: 0
