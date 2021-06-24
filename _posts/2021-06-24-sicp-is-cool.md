@@ -1,10 +1,11 @@
 ---
-title: "Reading log: SICP is cool."
+title: "Reading log: SICP (the wizard book) is cool"
 tags:
   - Summer
   - Books
+  - Reading logs
   - Programming
-date: 2021-06-23 13:00:00 +0700
+date: 2021-06-24 16:50:00 +0700
 ---
 
 *In which I nerd about SICP.*
@@ -16,12 +17,15 @@ It is based on a language called Scheme, a Lisp dialect which at first seems lik
 Yet, apparently, many people consider SICP to be one of the best books ever written about computer programming.
 Some people preach endlessly about how understanding Lisp is akin to attaining enlightenment, something that can change the way you think about programming forever.
 
+{: .figure}
+> ![](/post-extensions/sicp-is-cool/gabriel-wizard-book.jpg){:width="80%"}
+
 I got curious, because last spring I wrote a Scheme interpreter for my Python class[^py] homework, and while that gave me a good overview of the language, I couldn't see how Lisps are special.
 
 So, I decided to go down the rabbit hold and read SICP.
 (This is partly because I have nothing better to do this summer.)
 
-The result: I did not get that alleged "enlightenment" but oh boy were there a lot of fascinating concepts and elegant explanations.
+The result: I did not get that alleged "enlightenment" and 100x productivity boost but oh boy were there a lot of fascinating concepts and elegant explanations.
 
 I'm writing this blog post to catalog some of the ideas I thought were really neat. Perhaps you might find them interesting too!
 
@@ -64,7 +68,7 @@ Special forms include:
 
 [^lexical]: This is called lexical scoping. I won't describe it in details here.
 
-Here is an example of how you would compute the 10th Fibonacci number.
+Here is an example of how you would compute Fibonacci numbers.
 ```scheme
 (define fib
   (lambda (n)
@@ -143,7 +147,7 @@ Similarly, you can also claim that the following to-do list is not just data, bu
 ```
 [^defmacro]: This example was taken from [defmacro.org](https://www.defmacro.org/ramblings/lisp.html).
 
-Why? Well, you can feed this into a custom evaluator built specifically for parsing to-do lists stored as S-expressions (which aren't so different from XML we're used to).
+Why? Well, you can feed this into a custom evaluator built specifically for parsing to-do lists stored as S-expressions. (There are a lot of XML parsers around. S-expressions aren't that different.)
 
 Or perhaps, even better, feed this into a Scheme interpreter that has special forms `todo` and `item` built in, and these special forms happen to transform this data into Scheme S-expressions that can actually be evaluated.
 
@@ -154,11 +158,12 @@ Like any other languages, Scheme provides functions that let you manipulate list
 Scheme also provides facilities for you to define your own special forms by specifying how the arguments are re-arranged. (These are called macros.)
 For example, you can define a special form `(loop <var1> <var2> <...> from <begin-val> up to <end-val> <body>)` that lets you do nested loops with all variables ranging from `<begin-val>` to `<end-val>`. Wherever the compiler sees a `loop` form with one variable, it knows to substitute with this code for you[^hygiene]:
 ```scheme
-; generate a loop to loop up from <begin> to <end> then call it immediately
+; generate a recursive function to loop up from <begin> to <end>
 (define (generated-loop-1 <var1>)
   <body> ; body will have access to the variable <var>
   (if (< <var> <end-val>)
       (generated-loop-1 (+ <var> 1))))
+; then call it
 (generated-loop-1 <begin-val>)
 ```
 Or with this code if there are two variables:
@@ -185,18 +190,14 @@ Macros can be controlled through special keywords like `#define`, `#ifdef`, `#if
 
 Meanwhile, in Scheme, we can use Scheme's existing functionalities to manipulate the code however needed, like in the example earlier we might use recursion to recursively generate the code.
 
-If it were possible to write macros in C using C code itself, you would have to manually write strings at character level, accounting for each original syntax you want to represent (like `if` and `for` with curly braces, and semicolons at the end of each statement).
+If it was possible to write macros in C using C's full functionalities, you would still have to manually write strings at character level, accounting for each original syntax you want to represent (like `if` and `for` with curly braces, and semicolons at the end of each statement).
 In Scheme, you just have to find/insert/delete/edit/duplicate list elements and not worry about the code's textual representation.
 
 I guess this is what people mean when they talk about the duality between code and data[^extrapolate].
 
-[^extrapolate]: SICP did not explicitly teach how to write macros. However, they really emphasized this idea in chapter 4 where we have to write a metacircular evaluator (an evaluator for Scheme that is written in Scheme itself).
+[^extrapolate]: SICP did not explicitly teach how to write macros. However, they really emphasized the idea that "code is data" in chapter 4 where we have to write a metacircular evaluator (an evaluator for Scheme that is written in Scheme itself).
 
 ---
-
-## Iterative processes
-
-
 
 ## Procedures enable storing data
 
@@ -257,9 +258,11 @@ Yet, we can achieve the illusion of doing so by creating anonymous functions tha
 
 [^acceptmodel]: Though, this requires us to accept the model of evaluation used in Scheme, and more generally, lambda calculus.
 
-## Discovering church numerals
+---
 
-The book took it further by asking us to do this execise.
+## Rediscovering church numerals
+
+The book took this concept of encapsulation further by asking us to do this execise.
 
 {: .infobox}
 > **Exercise 2.6.** In case representing pairs as procedures wasn't mind-boggling enough, consider that, in a language that can manipulate procedures, we can get by without numbers (at least insofar as nonnegative integers are concerned) by implementing 0 and the operation of adding 1 as
@@ -330,5 +333,151 @@ def five(fn):
   return wrapped
 ```
 
-## Mindbending infinite streams
+---
 
+## Infinite streams are trippy
+
+The third chapter of the book focuses on the notion of states and mutability.
+
+Interestingly, the book (and I guess, programmers in FP languages) considers mutability to be complicated: Mutability force us to think about *time* and reason through expression evaluations in a rather mechanistic manner.
+
+(In a lot of introductory programming courses, variables and mutations are among the first few things taught. This really makes me think that maybe imperative programming isn't as intuitive as it seems to be. How would the programmer world be like if we teach functional before imperative?)
+
+To cope with this complexity, the book introduces us to streams. Instead of focusing on a value of a variable and seeing it as changing, we consider the function of time representing the trajectory of that variable instead, which is unchanging.
+
+Streams in Scheme are like linked lists but they are lazily evaluated and memoized. Specifically,
+- `(cons-stream a b)` is a *special form* that gives a pair containing evaluated `a` and a promise to evaluate `b` at some point[^promise].
+- `(stream-car x)` accesses the first element of the pair `x` as usual.
+- `(stream-cdr x)` forces the evaluation of the second element, caches it, and returns it.
+
+[^promise]: We can implement `cons-stream` as a macro that transforms `b` into `(lambda () b)`, then `(stream-cdr x)` is simply `((cdr x))` (take the `cdr` then call to force the evaluation). (Don't forget to add memoization too.)
+
+We can have infinitely long streams. For example, this code generates a stream of positive integers, `integers`:
+```scheme
+(define (integers-starting-from n)
+  (cons-stream n
+               (integers-starting-from (+ n 1))))
+(define integers (integers-starting-from 1))
+```
+This works because the second element of `integers`, namely `(integers-starting-from (+ n 1))` has not been evaluated yet. So, we aren't actually storing infinite amount of data in memory.
+
+Only when we try to access the `i`-th element are we forcing the evaluation of all the necessary elements. For example, if we try to access the third element, `(stream-car (stream-cdr (stream-cdr integers)))`, we will have the following expansion:
+```scheme
+(stream-car (stream-cdr (stream-cdr integers)))
+-> (stream-car (stream-cdr (stream-cdr (integers-starting-from 1))))
+-> (stream-car (stream-cdr (stream-cdr (cons-stream 1 (integers-starting-from 2)))))
+-> (stream-car (stream-cdr (integers-starting-from 2)))
+-> (stream-car (stream-cdr (cons-stream 2 (integers-starting-from 3))))
+-> (stream-car (integers-starting-from 3))
+-> (stream-car (cons-stream 3 (integers-starting-from 4)))
+-> 3
+```
+
+Other than that, we can treat streams as if they are lists. Most list functions have a stream equivalent you can use.
+
+For example, `stream-filter` lazily constructs a new stream from a given stream which satisfies the predicate. Accessing the fourth element of `(stream-filter (lambda (x) (divisible? x 2)) integers)` (a stream of even numbers) will trigger the evaluation of the first eight elements of `integers`.
+
+This is different from iterators in Python. In Python, you have an iterator object which stores where you are and how it will continue computing the next values. You must call `next` every time to access each new element (or use Python's `for` loop which is a syntactic sugar), and you can't go back without creating a new iterator which may require recomputing certain expressions.
+
+If Python's iterators *do*, Scheme's streams *are*.
+
+---
+
+Infinite streams can do some really trippy things. Consider this:
+```scheme
+(define ones (cons-stream 1 ones))
+```
+We are defining `ones` in terms of itself: The sequence `ones` consists of `1`, followed by all elements of `ones`.
+
+This works perfectly because when we try to access the second element of `ones`, it evaluates to the first element of `ones` which is known to be `1`. 
+When we try to access the `i`-th element, it evaluates to the `(i-1)`-th element which can be computed (or memoized), and we eventually get to `1`.
+
+So, if we have `(add-streams a b)` for lazily adding two streams `a` and `b` position-wise, we could do something like this:
+```scheme
+(define integers (cons-stream 1 (add-streams ones intgers)))
+```
+Then, the second element is simply the first element plus one, which is two. The third element is the second element (which we already know) plus one, which gives three, and so on.
+
+Similarly, here's how we can define a stream of Fibonacci numbers:
+```scheme
+(define fibs
+  (cons-stream 0
+               (cons-stream 1
+                            (add-streams (stream-cdr fibs)
+                                         fibs))))
+```
+In a way, this is like writing `fib[n] = fib[n-1] + fib[n-2]` and the base cases `fib[0] = 0` and `fib[1] = 1` directly.
+We don't have to write a function that can compute the `n`-th Fibonacci for us.
+We just write what *all* Fibonacci numbers are, and let lazy evaluation do the magic. (We also get memoization for free!)
+
+---
+
+Here's another cool example.
+```scheme
+(define primes
+  (cons-stream 2
+               (stream-filter prime? (integers-starting-from 3))))
+(define (prime? n)
+  (define (iter ps)
+    (cond ((> (square (stream-car ps)) n) true)
+          ((divisible? n (stream-car ps)) false)
+          (else (iter (stream-cdr ps)))))
+  (iter primes))
+```
+
+We define `primes` to be a stream of primes, which consists of `2` and other integers that satisfy the `prime?` predicate[^efficientprime].
+
+[^efficientprime]: There are much more efficient ways to compute primes, like the [incremental sieve][incrementalsieve].
+
+[incrementalsieve]: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Incremental_sieve
+
+But wait, the function `prime?` is actually defined in terms of `primes`! It checks whether `n` is divisible by any other prime numbers up to its square root.
+
+This recursive definition works because at any point in the generation of `primes`, enough smaller numbers have been generated so `prime?` computations can succeed.
+
+---
+
+This final example blew my mind with its simplicity.
+
+```scheme
+; (a0, a1, a2, a3, ...) represents the power series a0 + a1*x + a2*x^2 + a3*x^3 + ...
+
+(define (integrate-series s) ; constant coefficient omitted
+  (stream-map / s integers))
+(define exp-series ; integral of e^x is e^x
+  (cons-stream 1 (integrate-series exp-series)))
+(define cosine-series ; cos x = integral of -sin x with constant of integration 1
+  (cons-stream 1 (scale-stream (integrate-series sine-series) -1)))
+(define sine-series ; sin x = integral of cos x with constant of integration 0
+  (cons-stream 0 (integrate-series cosine-series)))
+
+(stream-take exp-series 10)
+; outputs (1 1 1/2 1/6 1/24 1/120 1/720 1/5040 1/40320 1/362880)
+(stream-take cosine-series 10)
+; outputs (1 0 -1/2 0 1/24 0 -1/720 0 1/40320 0)
+(stream-take sine-series 10)
+; outputs (0 1 0 -1/6 0 1/120 0 -1/5040 0 1/362880)
+```
+
+A few things to notice: We are defining $\exp$ in terms of itself, integrated. We define $\cos$ in terms of the integral of $\sin$ and $\sin$ in terms of the integral of $\cos$.
+
+It seems like we've only written down the properties of $\exp$, $\sin$, and $\cos$, not how to compute them.
+Yet, if we reason through this like in the previous examples, these properties already describe unambiguously how to compute each term.
+
+It's a dance between streams. To compute the fourth term of cosine series, you need to compute the integral of the third non-constant term of sine, flipping the sign. The integral of the third term is simply the third term of sine scaled. To know the third term of sine, you need to look at the second term of cosine, which can be deduced from the first term of sine, and eventually, we're back at the base case.
+
+I don't think it's the programming that's interesting per se. Rather, I haven't seen this way of recursively computing power series before.
+
+This is magical. Now I know why people talk so much about functional programming and why lazy evaluation seems to be such a big deal.
+
+(Try implementing those examples in Python. It's a lot more annoying than you'd expect.[^ugly])
+
+[^ugly]: Rather, you'll see a lot of lambdas that just don't belong there aesthetically.
+
+---
+
+That's it! I've only finished the first three chapters so far. The last two chapters focus on interpretation and compilation, which I might work through at some point. SICP is not a functional programming book per se, and I've barely scratched the surface, but dang, this is cool. Not to mention, this is still only the "mostly mathematical" side of things. There are still practical Lisp languages to learn, like [Common Lisp][gigamonkey].
+
+[gigamonkey]: https://gigamonkeys.com/book/
+
+If you're looking for something to read, SICP is a good choice.
