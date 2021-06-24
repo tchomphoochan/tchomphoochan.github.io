@@ -282,7 +282,7 @@ This was the first time I had to interpret complicated nested lambda expressions
 Slowly working through the substitutions until I saw the patterns did the trick.
 It made me more comfortable with reading other lambda expressions, including understanding the Y-combinator I couldn't quite grasp before.
 
-As it turns out, a number $n$ is represented by a function which takes in a function $f$ and outputs the function that represents composing $f$ for a total of $n$ times, namely $$f^{\circ n} = \underbrace{f \circ f \circ \cdots \circ f}_{n\text{ times}}$$.
+As it turns out, a number $n$ is represented by a function which takes in a function $f$ and outputs the function that represents composing $f$ for a total of $n$ times, namely $f^{\circ n} = \underbrace{f \circ f \circ \cdots \circ f}_{n\text{ times}}$.
 
 So, zero simply takes $f$ to the identity function. One takes $f$ to itself. Two takes $f$ to $f \circ f$, and so on.
 
