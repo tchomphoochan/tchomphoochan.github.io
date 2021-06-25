@@ -22,7 +22,7 @@ Some people preach endlessly about how understanding Lisp is akin to attaining e
 
 I got curious, because last spring I wrote a Scheme interpreter for my Python class[^py] homework, and while that gave me a good overview of the language, I couldn't see how Lisps are special.
 
-So, I decided to go down the rabbit hold and read SICP.
+So, I decided to go down the rabbit hole and read SICP.
 (This is partly because I have nothing better to do this summer.)
 
 The result: I did not get that alleged "enlightenment" and 100x productivity boost but oh boy were there a lot of fascinating concepts and elegant explanations.
@@ -145,7 +145,7 @@ Similarly, you can also claim that the following to-do list is not just data, bu
     (item (priority medium) "Wash the dishes.")
     (item (priority medium) "Buy more soap."))
 ```
-[^defmacro]: This example was taken from [defmacro.org](https://www.defmacro.org/ramblings/lisp.html).
+[^defmacro]: This example was taken from <https://www.defmacro.org/ramblings/lisp.html>.
 
 Why? Well, you can feed this into a custom evaluator built specifically for parsing to-do lists stored as S-expressions. (There are a lot of XML parsers around. S-expressions aren't that different.)
 
@@ -280,7 +280,9 @@ The book took this concept of encapsulation further by asking us to do this exec
 This was the first time I had to interpret complicated nested lambda expressions myself without knowing beforehand the expected behavior. (Conditionals were much easier to invent.)
 
 Slowly working through the substitutions until I saw the patterns did the trick.
-It made me more comfortable with reading other lambda expressions, including understanding the Y-combinator I couldn't quite grasp before.
+It made me more comfortable with reading other lambda expressions, including understanding the Y-combinator I couldn't quite grasp before[^lambdavideo].
+
+[^lambdavideo]: My friend recommended a really good talk introducing lambda calculus: <https://www.youtube.com/watch?v=3VQ382QG-y4>.
 
 As it turns out, a number $n$ is represented by a function which takes in a function $f$ and outputs the function that represents composing $f$ for a total of $n$ times, namely $f^{\circ n} = \underbrace{f \circ f \circ \cdots \circ f}_{n\text{ times}}$.
 
@@ -373,9 +375,11 @@ Only when we try to access the `i`-th element are we forcing the evaluation of a
 -> 3
 ```
 
-Other than that, we can treat streams as if they are lists. Most list functions have a stream equivalent you can use.
+Other than that, we can treat streams as if they are lists.
 
+Most list functions have a stream equivalent you can use.
 For example, `stream-filter` lazily constructs a new stream from a given stream which satisfies the predicate. Accessing the fourth element of `(stream-filter (lambda (x) (divisible? x 2)) integers)` (a stream of even numbers) will trigger the evaluation of the first eight elements of `integers`.
+The function `stream-map` lazily calls the given function on each element of the given stream to get a new stream: `(stream-map (lambda (x) (* x x)) integers)` creates a stream of perfect squares.
 
 This is different from iterators in Python. In Python, you have an iterator object which stores where you are and how it will continue computing the next values. You must call `next` every time to access each new element (or use Python's `for` loop which is a syntactic sugar), and you can't go back without creating a new iterator which may require recomputing certain expressions.
 
@@ -441,9 +445,10 @@ This final example blew my mind with its simplicity.
 
 ```scheme
 ; (a0, a1, a2, a3, ...) represents the power series a0 + a1*x + a2*x^2 + a3*x^3 + ...
-
+; stream-map can take more than one streams at a time and combine the elements position-wise (here using a divide function)
 (define (integrate-series s) ; constant coefficient omitted
-  (stream-map / s integers))
+  (stream-map / s integers)) 
+
 (define exp-series ; integral of e^x is e^x
   (cons-stream 1 (integrate-series exp-series)))
 (define cosine-series ; cos x = integral of -sin x with constant of integration 1
