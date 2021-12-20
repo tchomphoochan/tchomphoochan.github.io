@@ -1,9 +1,6 @@
 ---
 title: "Power tripping with infinite lists in Haskell"
 tags:
-  - Summer
-  - Books
-  - Reading logs
   - Programming
 date: 2021-12-20 17:37:00 -0500
 ---
