@@ -180,3 +180,6 @@ $\cos x = 1 - \frac{x^2}{2} + \frac{x^4}{4} + \cdots$
 
 Have a good day.
 
+{: .figure}
+> ![](https://i.kym-cdn.com/photos/images/original/002/128/164/13b.png){:width="70%"}
+> Don't you wish Haskell uses actual fractions by default like Scheme does?
