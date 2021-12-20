@@ -20,6 +20,7 @@ Ready, set, go!
 
 {: .figure}
 > ![](/post-extensions/lazy-power-series-integration/haskellanime.png){:width="80%"}
+> Because anime girls holding programming books is always the best cover for a blog post.
 
 ---
 
@@ -68,6 +69,10 @@ integers = integersFrom 1
 ```
 
 This says: `integersFrom n` is a list consisting of `n` as its first element and the rest is the list `integersFrom (n+1)`, i.e. `integersFrom n` is `[n,n+1,n+2..]`. Then, `integers` is just `integersFrom 1`. Nice.
+
+{: .figure}
+> ![](https://i.imgflip.com/2kaaae.jpg){:width="80%"}
+> People who aren't functional programmers.
 
 ---
 
@@ -144,6 +149,10 @@ exp 10
 ```
 
 Damn.
+
+{: .figure}
+> ![](https://i.redd.it/9vfjzu7pbt801.png){:width="80%"}
+> I've been trying to find a meme about infinite series online but I couldn't find a good one.
 
 ---
 
