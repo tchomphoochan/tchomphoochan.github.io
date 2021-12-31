@@ -22,6 +22,10 @@ This definition of `fact` requires that its body can look up the name `fact` in 
 fact = lambda n: 1 if n == 0 else n * fact(n-1)
 ```
 
+We want to be able to write `fact` entirely in terms of anonymous functions which do not have free variables. These things have a fancy name: "combinators."
+
+Y combinator, which we will eventually reinvent, is of interest because it provides us with a primitive for building recursive functions in languages that provide higher-order functions but not recursion by default.
+
 ---
 
 ## Version 1
@@ -50,7 +54,7 @@ I hate code duplication, so I am writing a helper function to call the function 
 fact = (lambda f: f(f))(lambda f: lambda n: 1 if n == 0 else n * f(f)(n-1))
 ```
 
-Suppose I define `make_recur = lambda f: f(f)`, then the user could make their own recursive function just by writing a function that takes in `f`. To make a recursive call, write `f(f)(...)`. `make_recur` is actually the omega ($\Omega$) combinator. Here is an example of how to use it.
+Suppose I define `make_recur = lambda f: f(f)`, then the user could make their own recursive function just by writing a function that takes in `f`. To make a recursive call, write `f(f)(...)`. Here is an example of how to use it.
 ```py
 make_recur = lambda f: f(f)
 fib = make_recur(lambda f: lambda n: n if n <= 1 else f(f)(n-1)+f(f)(n-2))
