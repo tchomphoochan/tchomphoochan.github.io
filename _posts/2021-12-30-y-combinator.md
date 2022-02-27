@@ -139,3 +139,33 @@ $Y = \lambda f. (\lambda x. f (\lambda v. x x v))(\lambda x. f (\lambda v. x x v
 Again, you can condense this into $Y = \lambda f. (\lambda x. x x)(\lambda x. f (\lambda v. x x v))$.
 
 This works in Python.
+
+---
+
+
+## Another way to derive the Y combinator
+
+Here is another way I like to use to memorize how to write the Y combinator. This is probably not very understandable if you have not seen it before.
+
+First, you need to know that $Y$ finds fixed point of a function, namely $Y f$ gives the input $x$ such that $f x = x$, i.e. $f (Y f) = Y f$.
+
+We can repeatedly substitute $Y f$ with $f (Y f)$. So, $Y f = f (Y f) = f (f (Y f)) = f (f (f (f \dots)))$.
+
+This equation, $Y f = f (f (f (f \dots)))$, is the goal we are trying to achieve. How do we apply $f$ repeatedly?
+
+Well, let's answer a simpler question first: How do you make something run infinitely?
+
+This works: $(\lambda x. x x)(\lambda x. x x)$.
+
+Notice that if you keep simplifying the expression, you are always stuck at $(\lambda x. x x)(\lambda x. x x)$.
+
+We just need to sneak $f$ in there: $(\lambda x. f (x x))(\lambda x. f (x x))$.
+
+Observe $(\lambda x. f (x x))(\lambda x. f (x x)) = f (\lambda x. f (x x))(\lambda x. f (x x)) = f (f (\lambda x. f (x x))(\lambda x. f (x x))) = f (f (f \dots))$.
+
+We are done! $Y = \lambda f. (\lambda x. f (x x))(\lambda x. f (x x))$.
+
+To get the Z combinator, just add a redundant $v$:
+$Z = \lambda f. (\lambda x. f (\lambda v. x x v))(\lambda x. f (\lambda v. x x v)) $.
+
+Yay!
