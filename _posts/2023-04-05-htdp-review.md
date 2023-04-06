@@ -58,7 +58,6 @@ The authors of HTDP published a paper titled _The Structure and Interpretation o
 
 A major problem with SICP is described pretty well there so let me just quote it.
 
-{: .quote}
 > While the course briefly explains programming as the definition of some recursive procedures, it does not discuss how programmers determine which procedures are needed or how to organize these procedures. While it explains that programs benefit from functions as first-class values, it does not show how programmers discover the need for this power. While SICP introduces the idea that programs should use abstraction layers, it never mentions how or when programmers should introduce such layers of abstraction. [...]
 > 
 > More generally, SICP doesn’t state how to program and how to manage the design of a program. It leaves these things implicit and implies that students can discover a discipline of design and programming on their own. The course presents the various uses and roles of programming ideas with a series of examples. Some exercises then ask students to modify this code basis, requiring students to read and study code; others ask them to solve similar problems, which means they have to study the construction and to change it to the best of their abilities. In short, SICP students learn by copying and modifying code, which is barely an improvement over typical programming text books.
@@ -67,12 +66,10 @@ HTDP solves this issue by adopting a different approach.
 
 First, its explicit goal is to teach the necessary skills for students to succeed in computer science. These include understanding problem statements and mapping them, systematically, to code. HTDP also requires good habits like testing.
 
-{: .quote}
 > [S]tudents must learn that programming requires far more than writing down code and running it on some haphazardly chosen examples afterwards.
 
 Second, it provides a detailed "design recipe" that students can follow to design their programs rather than relying on ad-hoc insights as SICP does. The design recipe and the templates are driven by the structure of data given by the problems. Language constructs are introduced as needed to represent increasingly complex information.
 
-{: .quote}
 > "[W]hen we teach how to program, we should let data drive the syllabus."
 
 HTDP also addresses the issue with SICP's dependence on mathematical and engineering examples, which can be intimidating for students as they cannot distinguish actual programming knowledge from domain knowledge, by avoiding those topics and explicitly indicating if something is domain knowledge. HTDP teaches how to write interactive programs with graphical interfaces ("world programs"), which is more exciting to students.
