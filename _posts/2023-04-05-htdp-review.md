@@ -21,6 +21,8 @@ The book has what I think is an interesting approach to teaching introductory CS
 > - TOC
 > {:toc}
 
+---
+
 ## SICP recap
 
 First, let's do a quick walkthrough of the classic: _Structure and Interpretation of Computer Programs_, abbreviated SICP. Well... just the first two chapters really. This is to provide a reference for comparing HTDP to SICP. You can skip this section if you are already familiar with SICP. I also previously wrote [a post on some cool things I learned from SICP][oldpost].
@@ -52,6 +54,8 @@ The rest of the chapters deal with mutation and environmental model (§3.1-3.3),
 
 One thing to note is that SICP sprinkles math applications and algorithms throughout, so students should be exposed to a wide range of canonical examples in computer science (e.g. binary search, trees).
 
+---
+
 ## What do HTDP authors have to say about SICP?
 
 The authors of HTDP published a paper titled _The Structure and Interpretation of the Computer Science Curriculum_, accessible [here][sicsc]. The paper puts forth a critique of SICP and explains, at a high level, how HTDP's approach fixes SICP's shortcomings.
@@ -76,6 +80,8 @@ HTDP also addresses the issue with SICP's dependence on mathematical and enginee
 
 The paper did not mention this, but it is important to note: HTDP requires students to work with resources like DrRacket stepper (somewhat like a debugger; for expanding expressions mechanistically) and library references/documentation. The exercises practice these skills. I think this is pretty nice.
 
+---
+
 ## Diving into HTDP
 
 The book's prologue is a whirlwind tour on how one could write a program that animates a static image of a rocket, landing. The introduction uses an informal tone and concludes that despite having seen all of this, the reader should not consider themselves a programmer yet. What one really needs to learn in programming is how to _design_ programs, not just how to hack together pieces of code to make something work.
@@ -92,6 +98,8 @@ Between each part of the book, there is an "intermezzo" that dives into nitty-gr
 [^subset]: Or rather, a modified subset of Racket called BSL (Beginner Student Language), made for this book.
 
 The rest of this blog post is a walkthrough of HTDP's contents. I spend the most time describing the first two parts, specifically the design recipe and the templates, as these are the novel, pedagogical ideas presented by this book. The last four parts are skimmed over.
+
+---
 
 ### Part I: Fixed-Size Data
 
@@ -118,6 +126,8 @@ The second chapter teaches function definition and application in detail, walkin
 (define (stop y ke)
   0)
 ```
+
+---
 
 #### The design recipe
 
@@ -154,6 +164,8 @@ This design recipe is to be applied to all functions. World programs usually req
 [car-example]: https://github.com/emaphis/HtDP2e-solutions/blob/master/1-Fixed-Size-Data/03-HtDP/ex044.rkt
 
 The book emphasizes separating the "model" from the "view." It has exercises that explore alternative state definitions. For example, if the state is defined as "the number of clock ticks since the program starts," it is possible to animate the car moving to the right but more substantially difficult to teleport the car on user clicks.
+
+---
 
 #### Enumerations, intervals, itemizations
 
@@ -200,6 +212,8 @@ An interval defines classes of numbers via boundaries. The data definition and t
 
 Itemization is a way of including elements from both finite and infinite classes. It describes a data type as the sum of all the subclasses. See this in the next section on the space invader game.
 
+---
+
 #### Adding structs
 
 The design recipe mandates that the user thinks of and writes functional examples for all subclasses of the input (and covers the boundary cases in case of intervals). It is also possible to divide the function into multiple functions, one per subclass. The conditional statement in the top-level function would act as a dispatcher.
@@ -230,6 +244,8 @@ When a function takes in a struct as input, its template should contain all sele
 (define (r3-distance-to-0 p)
   (... (r3-x p) ... (r3-y p) ... (r3-z p) ...))
 ```
+
+---
 
 #### Space invader example
 
@@ -302,6 +318,8 @@ _[On Teaching How to Design Programs: Observations from a Newcomer][newcomer]_ d
 
 When developing a class, we should ensure that the design recipe is followed exactly. The templates should be checked by instructors, and ideally, the students should learn to recognize code that deviates from the template as well.
 
+---
+
 ### Part II: Arbitrarily Large Data
 
 #### Structural recursion
@@ -335,6 +353,8 @@ The programmer should *not* attempt to expand `(how-many (rest alos))` when work
 
 Note that this style of recursion is called "structural recursion," and not all problems can be solved with this. This is, however, the most natural and common form of recursion, and I think the book made the right decision to focus on this.
 
+---
+
 #### Using a table to figure out recursions
 
 The book suggests a method for solving recursive problems. First, come up with an example input. Then, create a table where the columns are: the input, the fields of the input (via selector expressions), the expected answer for recursive sub-inputs, and the expected answer for this input. This table should contain a row with the example input and as many rows as needed for all sub-inputs.
@@ -349,6 +369,8 @@ For example, consider the list `(cons "x" (cons "b" (cons "a" '())))`. The table
 
 
 From this table, we can conclude that the answer in the recursive case is `(+ 1 (how-many (rest alos)))`. (`(first alos)` turns out to be unnecessary here.)
+
+---
 
 #### Recursion on a natural number
 
@@ -376,6 +398,8 @@ This makes it possible to perform recursion on a natural number while still foll
     [(zero? n) '()]
     [(positive? n) (cons s (copier (sub1 n) s))]))
 ```
+
+---
 
 #### Design by composition
 
@@ -421,6 +445,8 @@ Of course, `insert` will be designed using structural recursion on `alon` as wel
 
 The book also walks through another example where it is sometimes necessary to generalize the function arguments so we have enough data to work with when performing structural recursion.
 
+---
+
 #### Choosing representations wisely
 
 There is some amount of creativity involved in choosing data representations. For example, suppose we want to design a function that takes in a non-empty list of temperatures. We could use the standard definition of lists and requires additionally as a precondition that the list is not empty, but it is not quite clear how the template should look like.
@@ -446,6 +472,8 @@ The template will look like this.
      (... (first ne-l) ... (sum (rest ne-l)) ...)]))
 ```
 Note how we use `(empty? (rest ne-l))` to figure out whether we are in the base case or the recursive case. For each case, we write down the appropriate selector expressions. Specifically, for the base case, it only makes sense to use `(first ne-l)`. For the recursive case, we use `(first ne-l)` and recurses on `(rest ne-l)`.
+
+---
 
 #### Beyond `cons`
 
@@ -476,6 +504,8 @@ The template would similarly use the appropriate selectors. Specifically, for th
 
 The rest of part 2 is just variations on these ideas, e.g. itemizations with lists, lists with structs, and recursive structs with lists.
 
+---
+
 ### Part III. Abstraction
 
 #### Functional abstraction
@@ -483,6 +513,8 @@ The rest of part 2 is just variations on these ideas, e.g. itemizations with lis
 Having covered both fixed-size data and arbitrarily large data, the book takes a detour and discusses functional abstraction. This is obviously different from SICP, which starts with functional abstraction followed by data abstraction later.
 
 First, part III shows how one might see similarities in the implementations of two functions and extract them by abstracting the similarities. This results in functions that take in other functions as arguments. A canonical example is `sort`, which takes in a comparison function.
+
+---
 
 #### Generic types
 
@@ -492,6 +524,8 @@ We also discuss how the function signature, i.e. the type of the function, can b
 ; – '() 
 ; – (cons ITEM [List-of ITEM])
 ```
+
+---
 
 #### How to use abstractions
 
@@ -558,6 +592,8 @@ The last chapter of this part introduces the `lambda` form, allowing us to avoid
                         scene))
          EMPTY-SCENE lop))
 ```
+
+---
 
 ### Part IV: Intertwined Data
 
@@ -650,6 +686,8 @@ The chapter also remarks that after doing all this work, we can simplify the cod
 
 The next few chapters in part III are just a lot of exercises/projects, including writing an interpreter for a subset of Racket using the newly introduced environmental model.
 
+---
+
 #### Simultaneous processing
 
 This chapter explicitly considers functions that take in two arguments or more, both of which are structurally recursive. There are three cases to consider.
@@ -706,6 +744,8 @@ Unlike previous examples, it is unclear how we should make recursive calls in th
 Because this cannot be determined, we move on to the next step of the design recipe which is to fill in the implementation. By using the table technique from part II, the programmer should be able to determine quickly that the answer is simply `(list-pick (rest l) (sub1 n))`.
 
 This recipe can sometimes yield code that is longer than necessary. We can systematically simplify the implementation afterward.
+
+---
 
 ### Part V: Generative Recursion
 
@@ -786,6 +826,8 @@ For the example problem, `bundle`, from earlier, the solution looks like the cod
 Other classical examples include quicksort, binary search, and all kinds of mathematical examples like Euclidean's algorithm, and Newton's method.
 
 Since SICP uses these examples from the very start (when introducing recursion), it is harder for beginners to extract general principles that they can use to inform their coding process. By focusing on structural recursion first, HTDP gets the easy stuff out of the way and makes it explicit when students need to do some creative problem-solving.
+
+---
 
 ### Part VI: Accumulators
 
