@@ -353,7 +353,7 @@ From this table, we can conclude that the answer in the recursive case is `(+ 1 
 #### Recursion on a natural number
 
 This part of the book also defines a natural number using Peano's construction.
-```
+```scheme
 ; An N is one of: 
 ; – 0
 ; – (add1 N)
