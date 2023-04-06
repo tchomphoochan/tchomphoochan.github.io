@@ -365,7 +365,7 @@ For example, consider the list `(cons "x" (cons "b" (cons "a" '())))`. The table
 | -------------------------------------- | -------------- | --------------------------- | ------------------------ | ----------------- |
 | `(cons "a" '())`                       | `"a"`          | `'()`                       | `0`                      | `1`               |
 | `(cons "b" (cons "a" '()))`            | `"b"`          | `(cons "a" '())`            | `1`                      | `2`               |
-| `(cons "x" (cons "b" (cons "a" '())))` | `"x"`          | `(cons "b" (cons "a" '()))` | `1`                      | `2`               |
+| `(cons "x" (cons "b" (cons "a" '())))` | `"x"`          | `(cons "b" (cons "a" '()))` | `2`                      | `3`               |
 
 
 From this table, we can conclude that the answer in the recursive case is `(+ 1 (how-many (rest alos)))`. (`(first alos)` turns out to be unnecessary here.)
