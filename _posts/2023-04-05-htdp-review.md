@@ -878,8 +878,9 @@ Note that instead of designing `function` directly, we use the design recipe to 
 
 For the example from above, `relative->absolute`, we use the accumulator `accu-dist` to keep track of the sum of the elements seen up until this point. We implement `relative->absolute/a` by performing structural recursion on the list `l` but also taking in `accu-dist` as an extra argument[^proof].
 
-[^proof]: To state the invariant more precisely: For all lists `l` and values `accu-dist`, `(add-to-each accu-dist l)` gives the same result as `(relative->absolute/a l accu-dist)`. A formal proof of this function in Coq can be found [here][proof-file]. (I had too much fun writing this.)
+[^proof]: To state the invariant more precisely: For all lists `l` and values `accu-dist`, `(add-to-each accu-dist l)` gives the same result as `(relative->absolute/a l accu-dist)`. A formal proof of this function in Coq can be found [here on Github][proof-gist]. (I had too much fun writing this.)
 
+[proof-gist]: https://gist.github.com/tchomphoochan/0f8cda3cce088c136bdc050443781c4b
 [proof-file]: /post-extensions/htdp-review/relative_to_abs.v
 
 ```scheme
