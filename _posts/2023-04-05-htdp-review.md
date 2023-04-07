@@ -249,7 +249,7 @@ When a function takes in a struct as input, its template should contain all sele
 
 #### Space invader example
 
-The demonstrating example in the book is creating a space invader game: A UFO spawns at a random horizontal position and descends from the top of the screen A tank at the bottom of the screen can be moved left or right by the player. The user can press the space bar to "shoot" one bullet. a natural data definition of the game state would have two cases:
+The demonstrating example in the book is creating a space invader game: A UFO spawns at a random horizontal position and descends from the top of the screen. A tank at the bottom of the screen can be moved left or right by the player. The user can press the space bar to "shoot" one bullet. A natural data definition of the game state would have two cases:
 ```scheme
 ; A SIGS (short for Space Invader Game State) is one of: 
 ; – (make-aim UFO Tank)
@@ -563,7 +563,7 @@ Since we want to start with an empty image and gradually add dots to the image, 
 (define (dots lop)
   (local [; Posn Image -> Image 
           (define (add-one-dot p scene)
-            ...)]
+            (... (posn-x p) ... (posn-y p) ... scene ...))]
     (foldr add-one-dot EMPTY-SCENE lop)))
 ```
 
@@ -889,7 +889,7 @@ For the example from above, `relative->absolute`, we use the accumulator `accu-d
 (define (relative->absolute.v2 l0)
   (local (
     ; [List-of Number] Number -> [List-of Number]
-    ; accumulator invariant: accu-dist is the sum
+    ; accumulator: accu-dist is the sum of distances seen so far
     (define (relative->absolute/a l accu-dist)
       (cond
         [(empty? l) '()]
