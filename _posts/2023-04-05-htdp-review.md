@@ -876,7 +876,11 @@ To solve problems using accumulators, we need to figure out what the accumulator
 
 Note that instead of designing `function` directly, we use the design recipe to design the accumulator version of the function, `function/a`. We would do structural recursion or generative recursion on the input arguments as usual, but the function should take extra arguments representing the accumulators. We can use the accumulators in the computation of the results if we assume and maintain appropriate invariants.
 
-For the example from above, `relative->absolute`, we use the accumulator `accu-dist` to keep track of the sum of the elements seen up until this point. We implement `relative->absolute/a` by performing structural recursion on the list `l` but also taking in `accu-dist` as an extra argument.
+For the example from above, `relative->absolute`, we use the accumulator `accu-dist` to keep track of the sum of the elements seen up until this point. We implement `relative->absolute/a` by performing structural recursion on the list `l` but also taking in `accu-dist` as an extra argument[^proof].
+
+[^proof]: To state the invariant more precisely: For all lists `l` and values `accu-dist`, `(add-to-each accu-dist l)` gives the same result as `(relative->absolute/a l accu-dist)`. A formal proof of this function in Coq can be found [here][proof-file]. (I had too much fun writing this.)
+
+[proof-file]: /post-extensions/htdp-review/relative_to_abs.v
 
 ```scheme
 ; [List-of Number] -> [List-of Number]
