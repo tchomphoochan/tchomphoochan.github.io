@@ -7,11 +7,6 @@ tags:
 date: 2023-04-05 21:30:00 -0400
 ---
 
-[sicp]: https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html
-[sicsc]: https://www2.ccs.neu.edu/racket/pubs/jfp2004-fffk.pdf
-[htdp]: https://htdp.org/
-[newcomer]: https://dl.acm.org/doi/10.1145/2692915.2628137
-
 This is a summary of _How to Design Programs: An Introduction to Programming and Computing_, abbreviated HTDP.
 
 The book has what I think is an interesting approach to teaching introductory CS. It is different from SICP enough, so I had to read it. (Saying "HTDP is like SICP but easier" is rather misleading for reasons you will see soon.)
@@ -20,6 +15,11 @@ The book has what I think is an interesting approach to teaching introductory CS
 > **Table of Contents**
 > - TOC
 > {:toc}
+
+[sicp]: https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html
+[sicsc]: https://www2.ccs.neu.edu/racket/pubs/jfp2004-fffk.pdf
+[htdp]: https://htdp.org/
+[newcomer]: https://dl.acm.org/doi/10.1145/2692915.2628137
 
 ---
 
