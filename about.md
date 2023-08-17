@@ -9,7 +9,7 @@ You can contact me at <t.chomphoochan@gmail.com>. If your email requires a respo
 
 My calendar is publicly available on [Google Calendar][calendar]. Send an invite if you'd like to meet!
 
-My resume is available at <tcpc.me/resume>.
+My resume is available at [tcpc.me/resume][resume].
 
 If I know you, feel free to [add me on Facebook][facebook]. I am also on:
 - [Medium][medium]
@@ -35,3 +35,5 @@ To recognize me, these are the four usernames I use regularly, depending on avai
 
 [github]: https://github.com/tchomphoochan
 [gitlab]: https://gitlab.com/tchomphoochan
+
+[resume]: https://tcpc.me/resume
