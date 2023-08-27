@@ -7,7 +7,7 @@ I am Thanadol (Pleng) Chomphoochan.
 
 You can contact me at <t.chomphoochan@gmail.com>. If your email requires a response, it will receive one within three business days. You can find my PGP key on [keybase.io][keybase] if you would like to encrypt your emails.
 
-My calendar is publicly available on [Google Calendar][calendar]. Send an invite if you'd like to meet!
+My calendar is publicly available on [Google Calendar][calendar] ([embedded version, in Eastern Time][calendar-embed]). Send an invite if you'd like to meet!
 
 My resume is available at [tcpc.me/resume][resume].
 
@@ -31,6 +31,7 @@ To recognize me, these are the four usernames I use regularly, depending on avai
 [medium]: https://medium.com/@aquablitz11
 
 [calendar]: https://calendar.google.com/calendar/u/0?cid=dC5jaG9tcGhvb2NoYW5AZ21haWwuY29t
+[calendar-embed]: https://calendar.google.com/calendar/embed?src=t.chomphoochan%40gmail.com&ctz=America%2FNew_York
 [keybase]: https://keybase.io/tcpc
 
 [github]: https://github.com/tchomphoochan
