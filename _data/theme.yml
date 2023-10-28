@@ -18,7 +18,7 @@ navigation:
   menu:
     - name: Posts
       path: "/posts"
-    - name: Projects
+    - name: Notes
       path: "/projects"
     - name: About
       path: "/about"
