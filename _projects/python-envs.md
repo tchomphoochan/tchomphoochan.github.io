@@ -21,7 +21,7 @@ $ which python3
 This means, when I run `python3`, my shell is running the file at this location. This seems to be the one from the official installer.
 
 To find out _all_ occurences of `python3` in the PATH folders, use `where python3`:
-```txt
+```sh
 $ where python3
 /Library/Frameworks/Python.framework/Versions/3.10/bin/python3
 /usr/local/bin/python3
@@ -34,14 +34,14 @@ Fun fact: It turns out `/usr/local/bin/python3` and `
 ## Where does `pip3` install the libraries?
 
 When you installed Python, the installer also tries to put PIP at the same location as the Python executable itself.
-```
+```sh
 $ which pip3
 /Library/Frameworks/Python.framework/Versions/3.10/bin/pip3
 ```
 PIP is configured with a folder that is pre-negotiated with Python. That way, the Python executable knows where to look for packages.
 
 You can check the negotiated location:
-```
+```sh
 $ pip3 -V
 pip 23.2.1 from /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip (python 3.10)
 ```
