@@ -28,8 +28,7 @@ $ where python3
 /usr/bin/python3
 ```
 
-Fun fact: It turns out `/usr/local/bin/python3` and `
-/Library/Frameworks/Python.framework/Versions/3.10/bin/python3` actually point to the same thing! Well, kinda. The former is a symbolic link to the latter, which is a symbolic link to many other links. If you keep following them, you'll find a single Python executable that's actually being run.
+Fun fact: It turns out `/usr/local/bin/python3` and `/Library/Frameworks/Python.framework/Versions/3.10/bin/python3` actually point to the same thing! Well, kinda. The former is a symbolic link to the latter, which is a symbolic link to many other links. If you keep following them, you'll find a single Python executable that's actually being run.
 
 ## Where does `pip3` install the libraries?
 
