@@ -1,0 +1,20 @@
+<head>
+  <meta http-equiv="refresh" content="1; URL=https://www.mit.edu/~tcpc/resume.pdf">
+</head>
+<body>
+  <script>
+    // https://stackoverflow.com/a/1349426
+    function makeid(length) {
+      let result = '';
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      const charactersLength = characters.length;
+      let counter = 0;
+      while (counter < length) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        counter += 1;
+      }
+      return result;
+    }
+    window.location = "https://www.mit.edu/~tcpc/resume.pdf?random=" + makeid(8);
+  </script>
+</body>
