@@ -24,7 +24,7 @@ Athena looks for SSH keys at `~/Public/.ssh/athena_dialup_authorized_kys`. If yo
 
 First, you need to make sure you have a program to manage Kerberos tickets. The program is a command line utility. It comes with [commands like `kinit`, `klist`, `kpasswd`][doc].
 
-I don't remember where I got the program from, but I have a feeling it comes pre-installed with newer versions of Mac OS. (Fun fact: Kerberos isn't an MIT-only thing!) Type `which kinit` on your terminal to check. If you need to download, [official Kerberos distribution page] seems reasonable.
+I don't remember where I got the program from, but I have a feeling it comes pre-installed with newer versions of Mac OS. (Fun fact: Kerberos isn't an MIT-only thing!) Type `which kinit` on your terminal to check. If you need to download, [official Kerberos distribution page][dist] seems reasonable.
 
 Then, you need to download some extra plugins from IS&T to make it work with MIT Athena Dialup. [Download from here.][plugin]
 
