@@ -1,5 +1,5 @@
 ---
-title: "Review/Summary: How to Design Programs (HTDP vs. SICP)"
+title: Documenting myself
 date: 2024-05-03 15:30:00 -0400
 ---
 
