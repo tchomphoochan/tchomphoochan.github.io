@@ -18,6 +18,8 @@ This document is going to be quite an info dump. I've done my best to organize t
 
 I recommend doing a quick read-through of this document at least once, noting down the topics that seem relevant to you right now and setting reminders to come back to the others at specific points in the future.
 
+---
+
 ## 2. Your visa: F-1 or J-1
 
 When you first came to the US to study at Brewster and your boarding school, you're likely on F-1 visa. F-1 visa is for most international students. It is about as you would expect: you should be a student, can do a little bit of internships here and there with approvals, no biggies. When you introduce yourself as an international student, people usually assume you're on F-1, since that's the only thing they know of.
@@ -44,6 +46,8 @@ You may not know for sure whether you want to stay in the US or go back to Thail
 
 Even if you do not plan to quit the scholarship, this document contains a lot of helpful information that will help with your legal stay here in the US. You should still read it.
 
+---
+
 ## 3. Quitting the scholarship: Overview
 
 There are three main components to successfully quitting the scholarship:
@@ -54,6 +58,8 @@ There are three main components to successfully quitting the scholarship:
 3. Actually live in the US
 	1. Have a full-time job (likely on H1-B or green card)
 	2. Find love, whatever
+
+---
 
 ## 4. Reducing your debt: MIT financial aid
 
@@ -75,6 +81,8 @@ MIT only looks at your parents' tax forms in Thailand and reported assets in you
 
 Note that while MIT does not care about the Thai scholarship program, you have to talk between the two parties to know where the money is going to be paid from. This is especially important when you were paid by the Thai scholarship---you have to tell OEADC that you've gotten the finaid approved and that you want OEADC to stop paying.
 
+---
+
 ## 5. Internship employment authorization
 
 **Relevant when you've accepted an internship offer.**
@@ -95,6 +103,8 @@ Students on J-1 visa need AT (Academic Training), which is way easier. Here are 
 	- Expect this to take up to 10 business days.
 
 While it is possible to get all of this done in as little as two weeks, I recommend you do it at least a month in advance. (Start in March or April.) Your company will appreciate it. You can also just do all of this as soon as you get your offer to make your life easier.
+
+---
 
 ## 6. Post-graduation employment authorization
 
@@ -119,11 +129,15 @@ In the long term, once you don't have the two year residency requirement, you'll
 
 The key thing to know is that while the two-year rule prohibits you from getting an H1-B visa, you can still start the process for it. Your company should guide you through this when you start your work full-time on F-1 OPT or J-1 post-completion AT. The process involves a lottery, in which you get higher priority if you have a masters degree, hence that's why doing an MEng is recommended.
 
+---
+
 ## 7. How to request letter of no objection
 
 I have no idea. I haven't done it yet lol. This is only relevant after you graduate, tell OEADC that you're done with the, and are ready to pay it off.
 
 One thing to keep in mind is that the process of obtaining the letter can take up to a year! This means, if you care about continuity in staying in the US, you actually don't have that much time to make money to pay off the debt.
+
+---
 
 ## 8. Remember: Keep ALL your documents
 
@@ -135,9 +149,13 @@ These processes require **all revisions of your immigration documents**, meaning
 
 Best practice: Have a folder (physical and digital) for storing all primary (i.e. not derived/downloadable), official documents. Organize by year. Keep your immigration documents, contracts, mailed tax forms, etc.
 
+---
+
 ## 9. Miscellaneous stuff
 
 **You should read this section as soon as you have time. It will help set the stage for the rest of your MIT career so you know what will be relevant when.**
+
+---
 
 ### 9.1 Get your SSN
 
@@ -149,11 +167,15 @@ The process to apply for SSN is quite simple. You need a proof of employment (e.
 
 [Check ISO website for more details.](https://iso.mit.edu/employment/social-security-number-ssn/)
 
+---
+
 ### 9.2 Get a phone number
 
 Try to have a consistent phone number that you are willing to put into official forms and your resume as the main way of contacting you. Just get a cheap Mint Mobile plan or something.
 
 On a related note, get a somewhat socially acceptable personal email address that you will use regularly from now on. It makes more sense for you to put your personal email address on your resume and most forms, because unlike your MIT email address, your personal email address doesn't expire (I hope).
+
+---
 
 ### 9.3 Passport renewal
 
@@ -174,6 +196,8 @@ You can renew your passport while you are in Thailand, which is likely going to 
 	- Expect about a month. For reference, I went on March 28 and got the passport on April 21.
 
 Since you have to go to the consulate in New York, you might want to combine this trip with an existing one. In my case, I went during my spring break NY trip.
+
+---
 
 ### 9.4 Finance recommendations
 
@@ -210,6 +234,8 @@ I recommend just using Robinhood. It's just the easiest.
 
 By the way, Robinhood can act as your high-yield savings account. With Robinhood Gold, its cash reserve interest can be way above top-tier banks can provide. (You probably can't use it for funding documentation, though.)
 
+---
+
 ### 9.5 Do your tax returns
 
 **Relevant in March of each year.**
@@ -223,6 +249,8 @@ Once you have all the forms prepared and print out, you'll have to ship them. US
 
 Note that once you hit 5 years in the US, you become a resident alien (rather than non-resident) for tax purposes. Sprintax will probably not be valid for you anymore, but at least you get perks like being able to actually e-file your taxes instead of mailing physically.
 
+---
+
 ### 9.6 Waiving OEADC tuition and insurance
 
 If you are on MIT financial aid, don't forget to submit two forms some time before July:
@@ -231,6 +259,8 @@ If you are on MIT financial aid, don't forget to submit two forms some time befo
 - Special purpose form to waive OEADC's tuition payment
 	- Send it at the same time as the insurance form.
 	- Of course, this only applies if MIT is paying your tuition.
+
+---
 
 ### 9.7 New visa application (when you're ready)
 
@@ -245,6 +275,8 @@ By June, you should be ready to submit a request for I-20 so you can get your F-
 	- If your money is all over the place, make sure to consolidate them and give them a month or two to show up on the bank statement.
 - Get a 2x2 inch visa photo
 	- CVS photos is a scam. Photo quality sucks. Try to see if you can find elsewhere.
+
+---
 
 ## 10. More stuff?
 
