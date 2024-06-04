@@ -3,7 +3,7 @@ title: "Comprehensive Guide to All Things Bureaucracy for TSxMIT undergraduates"
 date: 2024-06-04 00:55:00 -0400
 ---
 
-Share this post with the following link: <https://tcpc.me/tsxmit>.
+Share this post with the following link: <https://tcpc.me/tsxmit>. Please only share this among Thai scholar high schoolers or undergraduates that you know. Use your discretion. Do not post the link publicly.
 
 _Disclaimer: This guide is based on my experience studying at MIT with a very specific background, personality, and goals. It is definitely not a legal advice, and I provide no warranty nor guarantees about the correctness or (ironically, despite the title) comprehensiveness of information provided here. Please do your own research and be responsible for your own life._
 
