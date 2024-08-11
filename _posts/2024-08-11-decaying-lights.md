@@ -16,13 +16,13 @@ $$\newcommand{ev}[1]{\mathbb{E}\left[#1\right]}
 \newcommand{bigo}[1]{\mathrm{O}\!\left( #1 \right) }
 \newcommand{prob}[1]{\mathbb{P}\!\left( #1 \right) }$$
 
-Let's see, if we have $n=1$ lightbulb and $p=0.5$, then the expected time is 2 seconds. If we have $n = 2$ lightbulbs, the expected time is definitely longer than 2 seconds. It is also shorter than 4 seconds, because we aren't just considering one light bulb at a time. There's a chance that both lightbulbs go off at once, or maybe one lightbulb goes off, making it possible for us to just focus on the one remaining light bulb.
+Let's see, if we have $n=1$ lightbulb and $p=0.5$, then the expected time is 2 seconds. If we have $n = 2$ lightbulbs, the expected time is definitely longer than 2 seconds. It is also shorter than 4 seconds because we aren't just considering one light bulb at a time. There's a chance that both lightbulbs go off at once, or maybe one lightbulb goes off, making it possible for us to just focus on the one remaining light bulb.
 
-Our goal is to find a formula for computing $\evt{n} = \,$ the expected amount of time for $n$ lightbulbs to die, given probability of dying at each second is $p$.
+Our goal is to find a formula for computing $\evt{n} = \,$ the expected amount of time for $n$ lightbulbs to die, given that the probability of dying at each second is $p$.
 
 Depending on your background, this might seem like a very simple problem or a very difficult problem. **Either way, I highly encourage you to try this problem for yourself.**  The problem is surprisingly deep, and it's just a very cute problem.
 
-From this point onward is my solution**s**, including all the steps and detours along the way. This follows pretty much the exact path I've taken.
+From this point onward are my solution**s**, including all the steps and detours along the way. This follows pretty much the exact path I've taken.
 
 ## The competitive programmer's brain-rot
 
@@ -36,9 +36,9 @@ Let's get a sense of how this works with $p=0.5$.
 
 Obviously, $\evt{0} = 0$ and $\evt{1} = (1) = 2$.
 
-Now, to compute $\evt{2}$, we observe that after one second passes, there are three cases (or four equally likely scenarios):
-- No lights turn off. This happens with probability $0.25$, and we still need to take an expected time of $\evt{2}$ seconds from here to complete.
-- Exactly one light turns off. This happens with probability of $0.5$ (either one can turn off!). We need to take an expected time of $\evt{1}$ seconds here to complete.
+Now, to compute $\evt{2}$, we observe that after one second has passed, there are three cases (or four equally likely scenarios):
+- No light turns off. This happens with probability $0.25$, and we still need to take an expected time of $\evt{2}$ seconds from here to complete.
+- Exactly one light turns off. This happens with a probability of $0.5$ (either one can turn off!). We need to take an expected time of $\evt{1}$ seconds here to complete.
 - Both lights turn off. This happens with probability $0.25$, and we're done, i.e. taking $\evt{0} = 0$ seconds.
 
 From this, we can write
@@ -62,7 +62,7 @@ This agrees with our intuition that the answer is between 2 and 4. It turns out 
 We can do this again with $n=3$, but it's now a bit harder because there are eight equally likely scenarios.
 - No light turns off. This is a 1 in 8 chance.
 - Exactly one light turns off. There are three ways for this to happen, one for each light.
-- Exactly two lights turns off. There are also three ways for this to happen, one for each light that doesn't turn off.
+- Exactly two lights turn off. There are also three ways for this to happen, one for each light that doesn't turn off.
 - All lights turn off.
 
 That is,
@@ -81,7 +81,7 @@ Huh. Kinda funny $\frac{22}{7}$ shows up here. It's just a coincidence, though. 
 
 Anyhow, there are a few things that should start being obvious at this point. For one, the answer definitely involves [binomial coefficients](https://en.wikipedia.org/wiki/Binomial_coefficient), i.e. [Pascal's Triangle](https://en.wikipedia.org/wiki/Pascal%27s_triangle).
 
-To generalize to arbitrary value of $p$, you'll also need to know about [the binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution).
+To generalize to an arbitrary value of $p$, you'll also need to know about [the binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution).
 
 A quick recap: if you have $n$ items and you [independently choose, for each item, whether to include it or not, with probability $p$](https://en.wikipedia.org/wiki/Bernoulli_trial), then the probability that you picked exactly $k$ items is
 
@@ -97,7 +97,7 @@ $$
 \evt{n} = 1 + \sum_{k=0}^{n} \binom{n}{k}p^kq^{n-k} \evt{n-k},
 $$
 
-but we're not done yet! Don't forget that $\evt{n}$ shows up on both the left hand side and the right hand side, so you'll have to rearrange a little bit:
+but we're not done yet! Don't forget that $\evt{n}$ shows up on both the left-hand side and the right-hand side, so you'll have to rearrange a little bit:
 
 $$
 \begin{align}
@@ -183,7 +183,7 @@ Indeed, there is, but let's take a step back for the moment. There's an interest
 
 In the problem I discussed, the lightbulbs decide whether to turn off or not on each discrete second. In real life, they probably act in a more "continuous" manner. Is there a way we can turn this problem into a continuous version? Indeed, there is!
 
-In the discrete version, the time it takes for a single lightbulb to turn off follows a [geometric distribution](https://en.wikipedia.org/wiki/Geometric_distribution). The continuous analogue of this is called an [exponential distribution](https://en.wikipedia.org/wiki/Exponential_distribution). Extending this to $n$ lightbulbs is like having $n$ radioactive atoms and then asking about how long we would expect before all atoms finally decay.
+In the discrete version, the time it takes for a single lightbulb to turn off follows a [geometric distribution](https://en.wikipedia.org/wiki/Geometric_distribution). The continuous analog of this is called an [exponential distribution](https://en.wikipedia.org/wiki/Exponential_distribution). Extending this to $n$ lightbulbs is like having $n$ radioactive atoms and then asking about how long we would expect before all atoms finally decay.
 
 Spoiler: The solution is a lot cleaner than the mess we found earlier.
 
@@ -199,7 +199,7 @@ $$
 
 or intuitively, the lightbulb fails to turn off for the first $t-1$ seconds with probability $q = 1-p$ each second (independently) then successfully takes the probability $p$ that turns it off at the last second.
 
-Oh, note on notation: $T_i$ is what we called a geometric random variable.
+Oh, note on notation: $T_i$ is what we call a geometric random variable.
 
 Perhaps, it might be easier to think of this in terms of the [cumulative distribution function (CDF)](https://en.wikipedia.org/wiki/Cumulative_distribution_function), the probability that the lightbulb dies within the first $t$ second:
 
@@ -207,7 +207,7 @@ $$
 \prob{T_{i} \leq t} = 1-q^{t}.
 $$
 
-(Sanity check: $t=0$ means $\prob{T_{i} = 0} = 0$, which makes sense. A lightbulb only ever die at time $t=1, 2, 3, \cdots$. At $t\to \infty$, the probability approaches 1.)
+(Sanity check: $t=0$ means $\prob{T_{i} = 0} = 0$, which makes sense. A lightbulb only ever dies at time $t=1, 2, 3, \cdots$. At $t\to \infty$, the probability approaches 1.)
 
 In the [exponential distribution](https://en.wikipedia.org/wiki/Exponential_distribution), instead of using the geometric sequence, you use, *\*drum rolls\**, exponential sequence! That is, the exponential random variable $T_i$ has
 
@@ -215,17 +215,17 @@ $$
 \prob{T_{i} \leq t} = 1 - e^{-\lambda_{i} t},
 $$
 
-where $\lambda_{i}$  is the term that controls the rate of decay. The higher $\lambda_{i}$ is, the more eager the lightbulb is to turn off. We can calculate that $\ev{T_{i}} = \frac{1}{\lambda}$.
+where $\lambda_{i}$  is the term that controls the rate of decay; the higher $\lambda_{i}$ is, the more eager the lightbulb is to turn off. We can calculate that $\ev{T_{i}} = \frac{1}{\lambda}$.
 
-Intuitively, exponential distribution is the limit of geometric progression but with increasingly fine-grained time steps. The probability of success at each time step is very low, but you can set it so that, cumulatively, the probability of success in one second or the expected time to succeed is exactly what you want.
+Intuitively, an exponential distribution is the limit of geometric progression but with increasingly fine-grained time steps. The probability of success at each time step is very low, but you can set it so that, cumulatively, the probability of success in one second or the expected time to succeed is exactly what you want.
 
-You can't have both, though! Notice that if you set $\prob{T_{i}\leq1} = 0.5$, then $\lambda_{i} = 0.693$, which means the expected time is $1.443$ seconds. Continuous means there's more chance for the light to turn off in general, so this is faster than $2$ seconds we expect in the discrete version.
+You can't have both, though! Notice that if you set $\prob{T_{i}\leq1} = 0.5$, then $\lambda_{i} = 0.693$, which means the expected time is $1.443$ seconds. Continuous means there's more chance for the light to turn off in general, so this is faster than the $2$ seconds we expect in the discrete version.
 
-Similarly, if you want expected time to be exactly $2$ seconds, then the probability of not finishing within 1 second also has to rise too! The probability of finishing within 1 second falls to $0.393$.
+Similarly, if you want the expected time to be exactly $2$ seconds, then the probability of not finishing within 1 second also has to rise too! The probability of finishing within 1 second falls to $0.393$.
 
 ### Maximum of exponential variables
 
-Okay, back to the continuous analogue of the original problem. We have $n$ lightbulbs. Light bulb $i$ turns off at time $T_i$. $T_1, T_2, \cdots, T_{n}$ are [independent and identically distributed (i.i.d.)](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables) exponential random variables. What's the expected time for all light bulbs to have turned off? That is, what is the expected value of $\max \left\\{ T_{1}, T_{2}, \cdots, T_{n} \right\\}$? [This might be familiar to you if you've taken the same probability class as I have.](https://math.mit.edu/~sheffield/2019600/Lecture19.pdf#page=61)
+Okay, back to the continuous analog of the original problem. We have $n$ lightbulbs. Light bulb $i$ turns off at time $T_i$. $T_1, T_2, \cdots, T_{n}$ are [independent and identically distributed (i.i.d.)](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables) exponential random variables. What's the expected time for all light bulbs to be turned off? That is, what is the expected value of $\max \left\\{ T_{1}, T_{2}, \cdots, T_{n} \right\\}$? [This might be familiar to you if you've taken the same probability class as I have.](https://math.mit.edu/~sheffield/2019600/Lecture19.pdf#page=61)
 
 This is tricky, so let's flip the problem around. If we have $n$ light bulbs, what does the distribution look like for $\min \left\\{ T_{1}, T_{2}, \cdots, T_{n} \right\\}$? That is, we only care about the time it takes for _any_ light bulb at all to turn off.
 
@@ -250,7 +250,7 @@ $$
 
 where $H_n$ is the $n$-th [harmonic number](https://en.wikipedia.org/wiki/Harmonic_number). The numbers clearly don't match our discrete version, regardless of how we tune $\lambda$.
 
-Oh, yea! Another thing to mention: It is well known that $H_{n}$ is in $\bigo{\log n}$. It grows at roughly the same pace as the discrete version.
+Oh, yeah! Another thing to mention: It is well known that $H_{n}$ is in $\bigo{\log n}$. It grows at roughly the same pace as the discrete version.
 
 ## A mathematician's approach
 
@@ -282,7 +282,7 @@ $$
 \evt{n} = \prob{T_{p}(n)>0} + \prob{T_{p}(n)>1} + \prob{T_{p}(n)>2} + \cdots
 $$
 
-Alright. We have to compute $\prob{T_{p}(n) > t}$, the probability that _at least one_ of the lights have failed to turn off in $t$ seconds (so the ultimate time is more than $t$).
+Alright. We have to compute $\prob{T_{p}(n) > t}$, the probability that _at least one_ of the lights has failed to turn off in $t$ seconds (so the ultimate time is more than $t$).
 This is just $1 - \prob{T_{p}(n) \leq t}$:  one minus the probability that _all_ lights turn off within the first $t$ seconds.
 
 Whether a lightbulb turns off in the first $t$ seconds or not is completely independent of other lightbulbs, so we can just focus on computing $\prob{T_{p}(1) \leq t}$. This value is simply $1 - q^t$, one minus the probability that the lightbulb fails to turn off $t$ times consecutively.
@@ -395,7 +395,7 @@ For solution #1, as I've mentioned earlier, to compute $\evt{n}$ for arbitrary $
 
 Actually, while we're at it, let's think about space complexity as well. We definitely need $\bigo{n}$ space to store the answers to the subproblems. In the code I provided above, I also spent $\bigo{n^2}$ space on computing $\binom{n}{k}$ but that's just me being lazy. I used [`functools.cache`](https://docs.python.org/3/library/functools.html#functools.cache), but you could manually write the function bottom-up, store just the last two rows of the Pascal's Triangle, and it will work just fine. Overall, the space complexity is $\bigo{n}$.
 
-For solution #2, we have a bit of an issue, because we are computing with infinite series. If we were to take only a constant number of terms, then given arbitrary $n$, the running time is just $\bigo{1}$. (Obviously, for all $n$ up to $N$, the running time is $\bigo{N}$.) The space complexity is just $O(1)$ for the entire computation as well.
+For solution #2, we have a bit of an issue because we are computing with infinite series. If we were to take only a constant number of terms, then given arbitrary $n$, the running time is just $\bigo{1}$. (Obviously, for all $n$ up to $N$, the running time is $\bigo{N}$.) The space complexity is just $O(1)$ for the entire computation as well.
 
 Realistically, we probably want to do something better than just taking a fixed number of terms. We could take a new term if the new term is larger than $\epsilon$, after which we don't care. That is, we don't care about $t$ for which
 
@@ -423,13 +423,13 @@ To summarize, solution #2 (infinite series) seems to have the "best" time comple
 
 ### Numerical accuracy
 
-It seems like solution #3, the binomial formula solution, is the best solution, but that's actually false!
+It seems like solution #3 (binomial formula) is the best solution, but that's actually false!
 
 In the code I provided above, if you try to compute for, say, $n>50$, you'll find that the answers don't make sense. At one point, the answers stop being monotonic. At another point, the answers simply cease to follow any pattern at all and just explode to infinity, even at relatively small $n$.
 
 There's something about the form of this answer that makes it incredibly not suited to floating point computations. I'm not exactly sure what it is exactly, but it could be the alternating positive/negative signs. (I tried many things, though. I summed up the positive and negative parts separately first; I sorted the terms by $\binom{n}{k}$ size and made sure to sum the smaller terms first; etc.)
 
-Other two solutions seem to be fine until $n>1000$, where the values in the computation are either too large ($\binom{n}{k}$) or too small ($q^t$) to fit in a floating point number. I can forgive that.
+The other two solutions seem to be fine until $n>1000$, where the values in the computation are either too large ($\binom{n}{k}$) or too small ($q^t$) to fit in a floating point number. I can forgive that.
 
 Overall, solution #1 (recurrence) is better because the formula can be exactly computed. Solution #2 (infinite series) is bound to have some serious floating point errors if you don't take enough terms.
 
@@ -437,7 +437,7 @@ Actually... how do we know which solution is the one with the "correct" answer?
 
 ### Computing with fractions
 
-Python is a fun language to use, because it comes with so many libraries readily available for explorations like this. Specifically, there is a [`fractions`](https://docs.python.org/3/library/fractions.html) library that implements rational number arithmetic for us.
+Python is a fun language to use because it comes with so many libraries readily available for explorations like this. Specifically, there is a [`fractions`](https://docs.python.org/3/library/fractions.html) library that implements rational number arithmetic for us.
 
 We could compute the exact fractions with either solution #1 or #3. Suddenly, all numerical problems with solution #3 disappear! After all, we aren't dealing with floating point shenanigans.
 
@@ -461,9 +461,9 @@ You can see example results here, for $p=\frac{1}{2}$:
 15 177175812995012739374/33510269239965128331
 ```
 
-We could use this method to compute the "ground truth." We can convert it to floating point and compare it to other solution's answers to see who's the closest. As discussed earlier, solution #1 indeed gives the closest numerical value.
+We could use this method to compute the "ground truth." We can convert it to a floating point number and compare it to other solution's answers to see who's the closest. As discussed earlier, solution #1 indeed gives the closest numerical value.
 
-One important thing to note: Using big integers mean you can't just assume all numerical operations are $\bigo{1}$ anymore, so all the time complexity analyses we did earlier are invalidated. If you want to analyze them properly, you're welcome to. I'm out.
+One important thing to note: Using big integers means you can't just assume all numerical operations are $\bigo{1}$ anymore, so all the time complexity analyses we did earlier are invalidated. If you want to analyze them properly, you're welcome to. I'm out.
 
 ### Summary
 
@@ -475,15 +475,15 @@ One important thing to note: Using big integers mean you can't just assume all n
 
 ## OEIS
 
-It turns out we're not the first one to investigate this problem thoroughly. If you take the numerators or the denominators and put them into OEIS, the bible for all the cool integer sequences, you'll find [sequence A158466](https://oeis.org/A158466), titled "Numerators of $\mathrm{EH}(n)$, the expected value of the height of a probabilistic skip list with $n$ elements and $p=1/2$."
+It turns out we're not the first to investigate this problem thoroughly. If you take the numerators or the denominators and put them into OEIS, the bible for all the cool integer sequences, you'll find [sequence A158466](https://oeis.org/A158466), titled "Numerators of $\mathrm{EH}(n)$, the expected value of the height of a probabilistic skip list with $n$ elements and $p=1/2$."
 
-One of the comments state:
+One of the comments states:
 > $n$ fair coins are flipped in a single toss. Those that show tails are collected and reflipped in another single toss. The process is repeated until all the coins show heads. H(n) is the discrete random variable that denotes the number of tosses required. $\prob{H(n) \leq k} = (1-(1/2)^k)^n$.
 
 This is indeed exactly the same problem! But more interesting, however, are the title and this comment elaborating on the title:
 > A probabilistic skip list is a data structure for sorted elements with $\bigo{\log n}$ average time complexity for most operations. The probability $p$ is a fixed internal parameter of the skip list.
 
-For some reason, we got ourselves well into computer science territory and stumble upon [skip lists](https://en.wikipedia.org/wiki/Skip_list)! This post is getting long enough as is, so I'm skipping (pun intended) discussing them.
+For some reason, we got ourselves well into computer science territory and stumbled upon [skip lists](https://en.wikipedia.org/wiki/Skip_list)! This post is getting long enough as is, so I'm skipping (pun intended) discussing them.
 
 It seems like no one has found a closed form that's simpler than any of the solutions we have, though, which is a pity.
 
