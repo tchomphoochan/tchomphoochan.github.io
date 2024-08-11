@@ -496,18 +496,18 @@ By the way, some extra connections to make:
 
 $$
 \exp \begin{pmatrix}
-. & . & . & . & . \\
-1 & . & . & . & . \\
-. & 2 & . & . & . \\
-. & . & 3 & . & . \\
-. & . & . & 4 & .
+\cdot & \cdot & \cdot & \cdot & \cdot \\
+1 & \cdot & \cdot & \cdot & \cdot \\
+\cdot & 2 & \cdot & \cdot & \cdot \\
+\cdot & \cdot & 3 & \cdot & \cdot \\
+\cdot & \cdot & \cdot & 4 & \cdot
 \end{pmatrix}
 =
 \begin{pmatrix}
-1 & . & . & . & . \\
-1 & 1 & . & . & . \\
-1 & 2 & 1 & . & . \\
-1 & 3 & 3 & 1 & . \\
+1 & \cdot & \cdot & \cdot & \cdot \\
+1 & 1 & \cdot & \cdot & \cdot \\
+1 & 2 & 1 & \cdot & \cdot \\
+1 & 3 & 3 & 1 & \cdot \\
 1 & 4 & 6 & 4 & 1
 \end{pmatrix}
 $$
