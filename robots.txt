@@ -1,0 +1,14 @@
+---
+layout: null
+sitemap: false
+---
+Sitemap: https://tcpc.me//sitemap.xml
+
+User-agent: *
+Disallow: /trying
+
+User-agent: *
+Disallow: /trying/
+
+User-agent: *
+Disallow: /trying/*
