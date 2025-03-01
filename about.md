@@ -29,7 +29,7 @@ Outside of academics, I do (or try to do) these things, in no particular order: 
 
 ## Name explanation
 
-In Thailand, most people have two names they go by. One is the standard, legal first name, which is usually very long and based on Bali or Sanskrit. Another is their "nickname."
+In Thailand, most people have two names they go by. One is the standard, legal first name, which is usually very long and based on Pali or Sanskrit. Another is their "nickname."
 
 In many other cultures, nicknames emerge naturally from their first name (e.g., as an abbreviation or as a term of endearment), but in Thai culture, parents assign their children "nicknames" at birth. Since most Thais do not speak English, they usually adopt cool-sounding English words as their children's nicknames. You might also see nicknames that are just simple Thai words or concepts.
 
