@@ -90,6 +90,7 @@ I briefly attended [Cranbrook Kingswood Upper School](https://schools.cranbrook.
 ### Classes taken
 
 #### Freshman Year
+
 | **Term**    | **Number** | **Subject Title**                     |
 | ----------- | ---------- | ------------------------------------- |
 | Fall 2020   | 6.854      | Advanced Algorithms                   |
@@ -102,7 +103,9 @@ I briefly attended [Cranbrook Kingswood Upper School](https://schools.cranbrook.
 |             | 6.009      | Fundamentals of Programming           |
 |             | 21M.301    | Harmony and Counterpoint I            |
 |             | 7.014      | Introductory Biology                  |
+
 #### Sophomore Year
+
 | **Term**    | **Number** | **Subject Title**                                                 |
 |-------------|------------|-------------------------------------------------------------------|
 | Fall 2021   | 6.031      | Elements of Software Construction                                 |
@@ -113,7 +116,9 @@ I briefly attended [Cranbrook Kingswood Upper School](https://schools.cranbrook.
 |             | 6.035      | Computer Language Engineering                                     |
 |             | 6.822      | Formal Reasoning about Programs                                   |
 |             | CMS.587    | Introduction to Education: Understanding and Evaluating Education |
+
 #### Junior Year
+
 | **Term**    | **Number** | **Subject Title**                                            |
 | ----------- | ---------- | ------------------------------------------------------------ |
 | Fall 2022   | 6.2050     | Digital Systems Laboratory ([project](/fpga-ray-marcher))    |
@@ -123,7 +128,9 @@ I briefly attended [Cranbrook Kingswood Upper School](https://schools.cranbrook.
 |             | 6.2000     | Electrical Circuits: Modeling and Design of Physical Systems |
 |             | 6.5660     | Computer Systems Security                                    |
 |             | 24.131     | Ethics of Technology                                         |
+
 #### Senior Year
+
 | **Term**    | **Number** | **Subject Title**                                                 |
 |-------------|------------|-------------------------------------------------------------------|
 | Fall 2023   | 6.2220     | Power Electronics Laboratory                                      |
@@ -136,7 +143,9 @@ I briefly attended [Cranbrook Kingswood Upper School](https://schools.cranbrook.
 |             | 6.2080     | Semiconductor Electronics Circuits                                |
 |             | 6.5840     | Distributed Computer Systems Engineering                          |
 |             | 21M.383    | Computational Music Theory                                        |
+
 #### Graduate Year
+
 | **Term**    | **Number** | **Subject Title**      |
 | ----------- | ---------- | ---------------------- |
 | Spring 2025 | 6.5950     | Secure Hardware Design |
