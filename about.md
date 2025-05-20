@@ -11,7 +11,7 @@ My [Google Calendar](https://calendar.google.com/calendar/u/0?cid=dC5jaG9tcGhvb2
 
 My resume is available at [tcpc.me/resume](/resume).
 
-If I know you, feel free to [add me on Facebook](https://www.facebook.com/aquablitz11). You can also find me on [GitHub](https://github.com/tchomphoochan).
+If I know you, feel free to [add me on Facebook](https://www.facebook.com/aquablitz11). You can also find me on [GitHub](https://github.com/tchomphoochan) and [LinkedIn](https://www.linkedin.com/in/tcpc/).
 
 To recognize me online, these are the four usernames I use regularly, depending on availability:
 - `tcpc`
