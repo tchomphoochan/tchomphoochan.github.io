@@ -33,7 +33,7 @@ In the second excerpt, if `enable` is asserted, then an update always happens wi
 
 ## Implicit conditions
 
-Let's solidify this understanding with the idea of "implicit conditions." Every basic block in the code has a condition under which it will execute. Under an `else` block, the precise condition is the negation of its preceding `if` block/
+Let's solidify this understanding with the idea of "implicit conditions." Every basic block in the code has a condition under which it will execute. Under an `else` block, the precise condition is the negation of its preceding `if` block.
 
 Applying this concept to the first excerpt, you can think of it as having these three mutually exclusive branches:
 - `reset`
