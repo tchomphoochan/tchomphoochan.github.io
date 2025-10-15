@@ -33,8 +33,9 @@ twitter:
   username: aquablitz11
   large_img: sometimes
 
-disqus:
-  username: aquablitz11
+# don't like this anymore
+# disqus:
+#  username: aquablitz11
 
 
 # Content Format
