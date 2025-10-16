@@ -3,7 +3,7 @@ title: "PSA: Design if-elses with priority"
 date: 2025-10-15 18:00:00 -0400
 ---
 
-_Public service announcement for 6.191 students struggling with lab 6._
+_Public service announcement for 6.191 students struggling with lab 6 (and others)._
 
 One thing consistently trips up students in lab 6 is the lack of understanding of logic. Actually, you might have already learned this before, but half of you will somehow forget about it in this lab. This post is a reminder.
 
