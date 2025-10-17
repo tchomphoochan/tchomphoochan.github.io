@@ -41,7 +41,7 @@ twitter:
 # Content Format
 # --------------
 
-timezone: Asia/Bangkok
+timezone: America/New_York
 paginate: 10
 #mathjax:  true
 
