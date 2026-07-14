@@ -88,7 +88,7 @@ end
     - Or you can write this as `!reset && !enable`.
 You can now see that the three branches' conditions agree with the previous analysis, but this is horrid. The first code excerpt was much better because it clearly showed that `reset` was prioritized.
 
-**Exercise:** Convince yourself that this is not equivalent to the first code excerpt.
+**Exercise:** Convince yourself that this is **not** equivalent to the first code excerpt.
 ```verilog
 if (!reset && enable) begin
     data <= data_in;
@@ -109,6 +109,17 @@ if (enable) begin
     else begin
         data <= data_in;
     end
+end
+```
+
+If you really must avoid nested-ifs, then consider:
+```verilog
+if (!enable) begin
+    // do nothing
+end else if (reset) begin
+    data <= 0;
+end else begin
+    data <= data_in;
 end
 ```
 
