@@ -3,29 +3,32 @@ layout: empty/about
 title: About Me       # you can also change the title.
 ---
 
-Hi. My name is **Thanadol Chomphoochan**. I usually go by "**Pleng**." I am from Thailand, though I currently reside in Cambridge, MA. I am currently a graduate student at MIT in Computer Science and Engineering. I will be working with [Citadel][citadel]'s Global Quantitative Strategies (GQS) team in Chicago, starting July 2025.
+Hi. My name is **Thanadol Chomphoochan**. I usually go by "**Pleng**." I am from Thailand, though I currently reside in Cambridge, MA. I am currently a graduate student at MIT in Computer Science and Engineering. I am working with [Citadel][citadel]'s Global Quantitative Strategies (GQS) team in New York as a Quantitative Research Engineer.
 
-You can contact me at [t.chomphoochan@gmail.com](mailto:t.chomphoochan@gmail.com). If your email explicitly requires a response, it will receive one within three business days.
-
-My [Google Calendar](https://calendar.google.com/calendar/u/0?cid=dC5jaG9tcGhvb2NoYW5AZ21haWwuY29t) is publicly available ([embedded version, in Eastern Time](https://calendar.google.com/calendar/embed?src=t.chomphoochan%40gmail.com&ctz=America%2FNew_York)).
+You can contact me at [t.chomphoochan@gmail.com](mailto:t.chomphoochan@gmail.com).
 
 My resume is available at [tcpc.me/resume](/resume).
 
 If I know you, feel free to [add me on Facebook](https://www.facebook.com/aquablitz11). You can also find me on [GitHub](https://github.com/tchomphoochan) and [LinkedIn](https://www.linkedin.com/in/tcpc/).
 
-To recognize me online, these are the four usernames I use regularly, depending on availability:
+To recognize me online, these are the usernames I use regularly, depending on availability:
 - `tcpc`
 - `t.chomphoochan`
 - `tchomphoochan`
+- `slimetutor`
+- `slimetutor_`
+- `aslimetutor`
 - `aquablitz11`
 
 [citadel]: https://www.linkedin.com/company/citadel-llc/
 
 ## Interests
 
-My current work is in bridging the gap between software and hardware transactional memory (TM) by developing a convenient framework for evaluating TM implementations on various platforms. I am generally interested in enabling building robust software, either through programming language design or formal verification. I have also dabbled in some electronics and embedded programming. I also spend a lot of my time teaching or brainstorming changes to introductory computer science curricula.
+I am generally interested in enabling building robust software, either through programming language design or formal verification. I have also dabbled in some electronics and embedded programming. I also spend a lot of my time teaching or brainstorming changes to introductory computer science curricula.
 
-Outside of academics, I do (or try to do) these things, in no particular order: play jazz piano; [play Celeste](https://youtube.com/playlist?list=PLtfWLkX9rYs9AMjk_Qd88ZnkNoqTDX6A3&si=gnrryVMlVzCWulr4); [type fast](https://monkeytype.com/profile/tcpc); write [blog posts](/posts); consume Thai tea and matcha; pick locks.
+My recent MIT thesis was in bridging the gap between software and hardware transactional memory (TM) by developing a convenient framework for evaluating TM implementations on various platforms.
+
+Outside of academics, I do (or try to do) these things, in no particular order: play jazz piano; [play Celeste](https://youtube.com/playlist?list=PLtfWLkX9rYs9AMjk_Qd88ZnkNoqTDX6A3&si=gnrryVMlVzCWulr4); [type fast](https://monkeytype.com/profile/tcpc); write [blog posts](/posts); produce and consume Thai tea and matcha; pick locks.
 
 ## Name explanation
 
