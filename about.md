@@ -3,7 +3,8 @@ layout: empty/about
 title: About Me       # you can also change the title.
 ---
 
-Hi. My name is **Thanadol Chomphoochan**. I usually go by "**Pleng**." I am from Thailand, though I currently reside in Cambridge, MA. I am currently a graduate student at MIT in Computer Science and Engineering. I am working with [Citadel][citadel]'s Global Quantitative Strategies (GQS) team in New York as a Quantitative Research Engineer.
+Hi. My name is **Thanadol Chomphoochan**. I usually go by "**Pleng**." I am working with [Citadel][citadel]'s Global Quantitative Strategies (GQS) team in New York as a Quantitative Research Engineer.
+I was from Thailand. I did my undergrad and masters at MIT.
 
 You can contact me at [t.chomphoochan@gmail.com](mailto:t.chomphoochan@gmail.com).
 
