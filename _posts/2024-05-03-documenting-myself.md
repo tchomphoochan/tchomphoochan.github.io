@@ -1,6 +1,7 @@
 ---
 title: Documenting myself
 date: 2024-05-03 15:30:00 -0400
+published: false
 ---
 
 There are lots of things I have been wanting to write about.
