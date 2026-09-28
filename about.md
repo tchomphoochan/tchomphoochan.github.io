@@ -76,10 +76,14 @@ In the past, I have worked intensively with Chiang Mai University's Department o
 
 ## Career and Credentials
 
-I am working on an MEng degree and will graduate in May 2025. I will be working with [Citadel][citadel]'s Global Quantitative Strategies (GQS) team starting July 2025.
+I have been a Quantiative Research Engineer at [Citadel][citadel]'s Global Quantitative Strategies (GQS) since July 2025.
 
-I [graduated][mit-degree] from MIT with Course 6-3 (Computer Science and Engineering) in May 2024. Although, I'm really closer to Course 6-2 (Electrical Engineering and Computer Science) in spirit.
-I interned with [Frictionless Systems][frictionless] in my freshman year, [DRW][drw] in my sophomore year, [Instabase][instabase] in my junior year, and [Jump Trading][jump] in my senior year.
+I [graduated][mit-degree] from MIT with Course 6-3 (Computer Science and Engineering) bachelors in May 2024 and MEng in May 2025.
+Although, I'm really closer to Course 6-2 (Electrical Engineering and Computer Science) in spirit.
+I interned with [Frictionless Systems][frictionless] in my freshman year,
+[DRW][drw] in my sophomore year,
+[Instabase][instabase] in my junior year,
+and [Jump Trading][jump] in my senior year.
 
 [mit-degree]: https://credentials.mit.edu/certificate/ae81d47092605489b0497d5240b7850c
 [frictionless]: https://www.linkedin.com/company/frictionless-systems
